@@ -1,4 +1,10 @@
-# reference-data-governance-tool-prototype
-Prototype for the Reference Data Governance Tool
+# Reference Data Governance Tool Prototype
+>Prototype for the Reference Data Governance Tool
 
-To run the prototype type `npm start`
+To install the prototype, run:
+
+```npm install```
+
+To start the prototype, run:
+
+```npm start```
