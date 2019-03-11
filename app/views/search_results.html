@@ -6,7 +6,6 @@
 {% endblock %}
 
 {% block header %}
-
 {% from "header/macro.njk" import govukHeader %}
 
 <header class="govuk-header " role="banner" data-module="header">
@@ -36,12 +35,12 @@
       <button type="button" role="button" class="govuk-header__menu-button js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
       <nav>
         <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
-          <li class="govuk-header__navigation-item ">
+          <li class="govuk-header__navigation-item">
             <a class="govuk-header__link" href="/index.html">
               Home
             </a>
           </li>
-          <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+          <li class="govuk-header__navigation-item  govuk-header__navigation-item--active">
             <a class="govuk-header__link" href="/search.html">
               Search
             </a>
@@ -77,6 +76,7 @@
   ]
 }) }} -->
 {% endblock %}
+
 {% block content %}
 <div class="govuk-width-container">
 <div class="govuk-phase-banner">
@@ -89,43 +89,106 @@
     </span>
   </p>
 </div>
-<a class="govuk-back-link" href="/index.html">Back</a>
+<a class="govuk-back-link" href="/search.html">Back</a>
 <main class="govuk-main-wrapper " id="main-content" role="main">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h1 class="govuk-heading-xl">
-      Dataset Search
+      Results
+        <span></span>
       </h1>
-      <p>
-        Select a specific dataset to manage from the list below.
-        </p>
 
 
-          <div class="govuk-form-group">
-                  <select class="govuk-select" id="dataset" name="dataset">
-                    <option value="null" selected="">Please choose an option</option>
-                    <option value="ranks">Border Force Ranks</option>
-                    <option value="carrier_codes">Carrier Codes</option>
-                    <option value="ranks">Countries</option>
-                    <option value="office_locations">Office Locations</option>
-                    <option value="port_codes">Port Codes</option>
-                  </select>
-                  </div>
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="event-name">
-            Or search for a different dataset
-          </label>
-          <span id="event-name-hint" class="govuk-hint">
-            The name or description of the dataset.
-          </span>
-          <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
-        </div>
-        <div>
 
-<a href="/search_results.html" role="button" draggable="false" class="govuk-button">Search</a>
-
+      <div class="highlight-summary">
+  <h2 class="govuk-heading-l" style="margin-bottom:15px;">Search Criteria</h2>
+  <ul class="govuk-list" style="list-style:none;">
+    <li>Value 1: name</li>
+    <li>Operator: =</li>
+    <li>Value 2: Taiwan</li>
+  </ul>
 </div>
-      </div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl govuk-!-margin-top-0">
+  </div>
+</div>
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col">id</th>
+      <th class="govuk-table__header" scope="col">iso31661alpha3</th>
+      <th class="govuk-table__header" class="numeric" scope="col">name</th>
+      <!-- <th class="govuk-table__header" class="numeric" scope="col">continent</th> -->
+      <!-- <th class="govuk-table__header" class="numeric" scope="col">dial</th> -->
+      <!-- <th class="govuk-table__header" class="numeric" scope="col">iso31661numeric</th> -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><span class="highlight">TW</span></td>
+      <td class="govuk-table__cell"><span class="highlight">TWN</span> </td>
+      <td class="govuk-table__cell" class="numeric">Taiwan</td>
+      <tr class="govuk-table__row">
+								<td class="govuk-table__cell" colspan="3">
+									<div>
+										<details class="govuk-details">
+											<summary class="govuk-details__summary" role="button" aria-controls="details-content-2" aria-expanded="true" title="Further information"><span class="summary">Further information</span></summary>
+												<div class="panel panel-border-narrow" id="details-content-2" aria-hidden="false">
+													<table class="govuk-table" width="100%">
+														<tbody class="govuk-table__body">
+															<tr class="govuk-table__row">
+																<td class="govuk-table__cell">Continent</td>
+																<td class="govuk-table__cell">AS</td>
+															</tr>
+															<tr class="govuk-table__row">
+																<td class="govuk-table__cell">dial</td>
+																<td class="govuk-table__cell">886</td>
+															</tr>
+															<tr class="govuk-table__row">
+																<td class="govuk-table__cell">iso31661numeric</td>
+																<td class="govuk-table__cell">158</td>
+															</tr>
+														</tbody>
+													</table>
+										</details>
+								</td>
+      </tr>
+  <!--  <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><span class="highlight">AF</span></td>
+      <td class="govuk-table__cell"><span class="highlight">AFG</span> </td>
+      <td class="govuk-table__cell" class="numeric">Afghanistan</td>
+      <td class="govuk-table__cell" class="numeric">AS</td>
+      <td class="govuk-table__cell" class="numeric">93</td>
+      <td class="govuk-table__cell" class="numeric">004</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><span class="highlight">AL</span></td>
+      <td class="govuk-table__cell"><span class="highlight">ALB</span> </td>
+      <td class="govuk-table__cell" class="numeric">Albania</td>
+      <td class="govuk-table__cell" class="numeric">EU</td>
+      <td class="govuk-table__cell" class="numeric">355</td>
+      <td class="govuk-table__cell" class="numeric">008</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><span class="highlight">DZ</span></td>
+      <td class="govuk-table__cell"><span class="highlight">DZA</span> </td>
+      <td class="govuk-table__cell" class="numeric">Algeria</td>
+      <td class="govuk-table__cell" class="numeric">AF</td>
+      <td class="govuk-table__cell" class="numeric">213</td>
+      <td class="govuk-table__cell" class="numeric">012</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><span class="highlight">AS</span></td>
+      <td class="govuk-table__cell"><span class="highlight">ASM</span> </td>
+      <td class="govuk-table__cell" class="numeric">American Samoa</td>
+      <td class="govuk-table__cell" class="numeric">OC</td>
+      <td class="govuk-table__cell" class="numeric">1-684</td>
+      <td class="govuk-table__cell" class="numeric">016</td>
+    </tr> -->
+  </tbody>
+</table>
 </main>
 </div>
 {% endblock %}
