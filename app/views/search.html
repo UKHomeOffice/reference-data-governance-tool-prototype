@@ -1,0 +1,118 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+<link href="/app/assets/sass/application.scss" media="all" rel="stylesheet" type="text/css">
+{% from "header/macro.njk" import govukHeader %}
+
+{{ govukHeader({
+  homepageUrl: "/index.html",
+  serviceName: "Reference Data Service",
+  serviceUrl: "#",
+  navigation: [
+    {
+      href: "/index.html",
+      text: "Home"
+    },
+    {
+      href: "#3",
+      text: "Account"
+    },
+    {
+      href: "#4",
+      text: "Sign out"
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+      Dataset Search
+        <span></span>
+      </h1>
+      <p>
+        This service allows you to search for and manage reference data that is owned by Border Force.
+      </p>
+      <p>
+        You can only view and edit datasets that you have permissions to manage.
+      </p>
+      <p>
+        To request access to a new dataset please contact the Information Asset Owner for the dataset.</p>
+      <p>
+        Select a specific dataset to manage from the list below.
+        </p>
+        <div>
+
+          <div class="govuk-form-group">
+
+                  <select class="govuk-select" id="dataset" name="dataset">
+                    <option value="null" selected="">Countries</option>
+                    <option value="port_codes">Port Codes</option>
+                    <option value="carrier_codes">Carrier Codes</option>
+                    <option value="office_locations">Office Locations</option>
+                    <option value="ranks">Border Force Ranks</option>
+                    <option value="ranks">Countries</option>
+                  </select>
+                  </div>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="event-name">
+            Or search for a different dataset
+          </label>
+          <span id="event-name-hint" class="govuk-hint">
+            The name or description of the dataset.
+          </span>
+          <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+        </div>
+        <div>
+        <button type="submit" class="govuk-button">
+Search
+</button>
+</div>
+      </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl govuk-!-margin-top-0">
+        </div>
+      </div>
+
+      <h2 class="govuk-heading-l">Results </h2>
+      <div class="highlight-summary">
+  <h2 class="govuk-heading-s" style="margin-bottom:15px;">Search Criteria</h2>
+  <ul class="govuk-list" style="list-style:none;">
+    <li>Value 1: Dataset Name</li>
+    <li>Operator: =</li>
+    <li>Value 2: Country</li>
+  </ul>
+</div>
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col">id</th>
+      <th class="govuk-table__header" scope="col">iso31661alpha3</th>
+      <th class="govuk-table__header" class="numeric" scope="col">name</th>
+      <th class="govuk-table__header" class="numeric" scope="col">continent</th>
+      <th class="govuk-table__header" class="numeric" scope="col">dial</th>
+      <th class="govuk-table__header" class="numeric" scope="col">iso31661numeric</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><span class="highlight">TW</span></td>
+      <td class="govuk-table__cell"><span class="highlight">TWN</span> </td>
+      <td class="govuk-table__cell" class="numeric">Taiwan</td>
+      <td class="govuk-table__cell" class="numeric">AS</td>
+      <td class="govuk-table__cell" class="numeric">886</td>
+      <td class="govuk-table__cell" class="numeric">158</td>
+    </tr>
+  
+  </tbody>
+</table>
+<div>
+{% endblock %}
