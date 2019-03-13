@@ -1,3 +1,6 @@
+# SCSS file that gets created at runtime and includes local path details
+lib/extensions/_extensions.scss
+
 # Logs
 logs
 *.log

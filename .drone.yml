@@ -1,0 +1,10 @@
+pipeline:
+
+  build:
+    image: docker:17.09.0-ce
+    environment:
+      - DOCKER_HOST=tcp://172.17.0.1:2375
+    commands:
+      - docker build -t ref-data-gov-tool-prototype:$${DRONE_COMMIT_SHA} .
+    when:
+      event: push
