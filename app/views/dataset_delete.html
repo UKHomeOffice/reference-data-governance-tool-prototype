@@ -1,0 +1,47 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+{% from "header/macro.njk" import govukHeader %}
+
+{{ govukHeader({
+  homepageUrl: "#",
+  serviceName: "Reference Data Governance Tool",
+  serviceUrl: "#",
+  navigation: [
+    {
+      href: "/index.html",
+      text: "Home",
+      active: true
+    },
+    {
+      href: "/search.html",
+      text: "Search"
+    },
+    {
+      href: "#4",
+      text: "Sign out"
+    }
+  ]
+}) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Are you sure?
+        <span></span>
+      </h1>
+      <p>
+        This will send a deletion request to the dataset owner. Once the request is approved, the dataset will no longer exist.
+</p>
+
+<a href="#.html" role="button" draggable="false" class="govuk-button">Confirm deletion</a>
+
+
+{% endblock %}
