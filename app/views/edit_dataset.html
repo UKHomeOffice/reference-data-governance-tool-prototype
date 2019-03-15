@@ -112,48 +112,34 @@ Reference Data Governance Tool
               <div class="govuk-grid-column-two-thirds-from-desktop">
 
                 <h1 class="govuk-heading-xl">Countries</h1>
+                <div class="govuk-form-group">
+                					<label class="govuk-label" for="datasetDefinition">
+                						Dataset Definition
+                					</label>
+                					<span id="hintdatasetName" class="govuk-hint">
+                						Describe the type of data stored in this dataset.
+                					</span>
+                          <textarea class="govuk-textarea" id="datasetDefinition" name="datasetDefinition" rows="5" aria-describedby="hintdatasetName"></textarea>
+                				</div>
+
+                      </div>
+                    </div>
+<p class=govuk-body-m> Select a change approver from the list below. </p>
+                    <div class="govuk-form-group">
+                            <select class="govuk-select" id="dataset" name="dataset">
+                              <option value="null" selected="">Select an approver</option>
+                              <option value="ranks">Bob Smith</option>
+                              <option value="carrier_codes">Josh Jones</option>
+                              <option value="countries">Helen Rush</option>
+                              <option value="office_locations">Alex Logi</option>
+                              <option value="port_codes">Keanu Reeves</option>
+                            </select>
+                            </div>
 
 
-                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-                  <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
-                      Dataset name
-                    </dt>
-                    <dd class="govuk-summary-list__value">
-                    Countries
-                    </dd>
-                    <dd class="govuk-summary-list__actions">
-                    <!--  <a class="govuk-link" href="/edit_dataset.html">
-                        Change
-                        <span class="govuk-visually-hidden"> name</span>
-                      </a>
-                    </dd> -->
-                  </div>
-                  <div class="govuk-summary-list__row">
-                    <dt class="govuk-summary-list__key">
-                      Dataset definition
-                    </dt>
-                    <dd class="govuk-summary-list__value">
-                      A list of countries and the associated names, descriptions, dial and ISO31661 alpha and numeric codes.
-                    </dd>
-                    <dd class="govuk-summary-list__actions">
-                      <a class="govuk-link" href="/edit_dataset.html">
-                        Change
-                        <span class="govuk-visually-hidden"> date of birth</span>
-                      </a>
-                    </dd>
-                  </div>
+                    <a href="#.html" role="button" draggable="false" class="govuk-button">Submit change for approval</a>
 
 
-                </form>
-
-              </div>
-            </div>
-
-            <a href="/dataset_delete.html" role="button" draggable="false" class="govuk-button">Delete this dataset</a>
-
-          </main>
-        </div>
 
 
           </main>
