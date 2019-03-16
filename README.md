@@ -35,21 +35,6 @@ docker run -p 3000:3000 -m 500M --memory-reservation 200M ref-data-gov-tool-prot
 > The prototype uses about 170MB of memory and will crash if there is insufficient memory available.
 
 
-## Pushing to Quay and deploying to kubernetes
+## Automated builds and deployment
 
-First build and push the image to Quay.io:
-
-```
-docker build -t ref-data-gov-tool-prototype .
-docker login -u="<quay username>" -p="<encrypted quay password>" quay.io
-docker commit <container id> quay.io/ukhomeofficedigital/ref-data-gov-tool-prototype
-docker push quay.io/ukhomeofficedigital/ref-data-gov-tool-prototype
-```
-
-Now deploy it using `kd`:
-
-```
-export HOSTNAME=<host.domain.com>
-export KUBE_NAMESPACE=<namespace>
-kd -f kube/ingress.yml  -f kube/service.yml  -f kube/network-policy.yml  -f kube/deployment.yml
-```
+This project will automatically build and deploy each change (`push` or `deployment`) to the `master` branch to the `dev` environment.
