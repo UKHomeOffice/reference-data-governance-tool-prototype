@@ -137,15 +137,47 @@ Reference Data Governance Tool
                                       <option value="port_codes">Port Codes</option>
                                     </select>
                                     </div>
-<p class=govuk-body-m> Or search for specific reference datasets </p>
+<p class=govuk-body-m> Or build a search query to search for specific values in reference datasets </p>
                           <div class="govuk-form-group">
+
                             <label class="govuk-label" for="search">
-					Search criteria
-				</label>
+          Search value
+        </label>
                             <span id="aircraftRegistration-hint" class="govuk-hint">
-            For example, the name or description of the dataset
+            For example, a name or description of a dataset
           </span>
 <input class="govuk-input" id="search" name="name" type="text">
+
+<label class="govuk-label" for="search">
+Select an operator
+</label>
+</span>
+<select class="govuk-select" id="dataset" name="dataset">
+<option value="null" selected="">In</option>
+<option value="ranks">Contains</option>
+<option value="carrier_codes">Does not equal</option>
+<option value="countries">Equals</option>
+<option value="office_locations">Not in</option>
+</select>
+
+
+
+                            <label class="govuk-label" for="search">
+					Pick a dataset
+				</label>
+        <select class="govuk-select" id="dataset" name="dataset">
+          <option value="null" selected="">Countries</option>
+          <option value="ranks">Border Force Ranks</option>
+          <option value="carrier_codes">Carrier Codes</option>
+          <option value="countries">Countries</option>
+          <option value="office_locations">Office Locations</option>
+          <option value="port_codes">Port Codes</option>
+        </select>
+
+
+
+
+
 </div>
                   <a href="/search_results.html" role="button" draggable="false" class="govuk-button">Search</a>
 
