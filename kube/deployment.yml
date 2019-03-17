@@ -43,5 +43,5 @@ spec:
           - name: NAXSI_USE_DEFAULT_RULES
             value: 'FALSE'
         ports:
-          - name: proxy
+          - name: https
             containerPort: 10443
