@@ -9,9 +9,6 @@ spec:
   ports:
   - name: https
     port: 443
-    targetPort: 3000
-  - name: http
-    port: 80
-    targetPort: 3000
+    targetPort: 10443
   selector:
     name: ref-data-gov-tool-prototype
