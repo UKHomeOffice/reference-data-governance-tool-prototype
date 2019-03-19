@@ -108,27 +108,16 @@ Reference Data Governance Tool
             <div class="govuk-grid-row">
               <div class="govuk-grid-column-two-thirds">
 
-                <!--  <div class="govuk-form-group">
-                    <label class="govuk-label" for="event-name">
-                      Or search for a different dataset
-                    </label>
-                    <span id="event-name-hint" class="govuk-hint">
-                      The name or description of the dataset.
-                    </span>
-                    <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
-                  </div>
-                  <div> -->
-
                   <form action="/search_results.html">
                   			<h1 class="govuk-heading-xl">Reference data search</h1>
 
                         <p class=govuk-body-m>
-                          Select a specific dataset to manage from the list below
+                          Select a specific entity to manage from the list below
                           </p>
 
 
                             <div class="govuk-form-group">
-                                    <select class="govuk-select" id="dataset" name="dataset">
+                                    <select class="govuk-select" id="entity" name="entity">
                                       <option value="null" selected="">Countries</option>
                                       <option value="ranks">Border Force Ranks</option>
                                       <option value="carrier_codes">Carrier Codes</option>
@@ -137,14 +126,14 @@ Reference Data Governance Tool
                                       <option value="port_codes">Port Codes</option>
                                     </select>
                                     </div>
-<p class=govuk-body-m> Or build a search query to search for specific values in reference datasets </p>
+<p class=govuk-body-m> Or build a search query to search for specific values across all entities. </p>
                           <div class="govuk-form-group">
 
                             <label class="govuk-label" for="search">
           Search value
         </label>
                             <span id="searchValue-hint" class="govuk-hint">
-            For example, a name or description of a dataset
+            For example, a name or description of an entity
           </span>
 <input class="govuk-input" id="search" name="name" type="text">
 
@@ -152,7 +141,7 @@ Reference Data Governance Tool
 Select an operator
 </label>
 </span>
-<select class="govuk-select" id="dataset" name="dataset">
+<select class="govuk-select" id="entity" name="entity">
 <option value="null" selected="">In</option>
 <option value="ranks">Contains</option>
 <option value="carrier_codes">Does not equal</option>
@@ -163,9 +152,9 @@ Select an operator
 
 
                             <label class="govuk-label" for="search">
-					Pick a dataset
+					Pick an entity
 				</label>
-        <select class="govuk-select" id="dataset" name="dataset">
+        <select class="govuk-select" id="entity" name="entity">
           <option value="null" selected="">Countries</option>
           <option value="ranks">Border Force Ranks</option>
           <option value="carrier_codes">Carrier Codes</option>

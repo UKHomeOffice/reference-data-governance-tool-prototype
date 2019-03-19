@@ -103,51 +103,57 @@ Reference Data Governance Tool
 	</p>
 </div>
 
-          <a class="govuk-back-link" href="/index.html">Back</a>
+          <a class="govuk-back-link" href="/search_results.html">Back</a>
+
+
+
           <main class="govuk-main-wrapper " id="main-content" role="main">
             <div class="govuk-grid-row">
-              <div class="govuk-grid-column-two-thirds">
-                <h1 class="govuk-heading-xl">
-                Dataset Directory
-                </h1>
-                <p>
-                  Select a specific dataset to manage from the list below.
-                  </p>
+              <div class="govuk-grid-column-two-thirds-from-desktop">
+
+                <h1 class="govuk-heading-xl">Countries</h1>
 
 
-                    <div class="govuk-form-group">
-                            <select class="govuk-select" id="dataset" name="dataset">
-                              <option value="null" selected="">Countries</option>
-                              <option value="ranks">Border Force Ranks</option>
-                              <option value="carrier_codes">Carrier Codes</option>
-                              <option value="countries">Countries</option>
-                              <option value="office_locations">Office Locations</option>
-                              <option value="port_codes">Port Codes</option>
-                            </select>
-                            </div>
-                <!--  <div class="govuk-form-group">
-                    <label class="govuk-label" for="event-name">
-                      Or search for a different dataset
-                    </label>
-                    <span id="event-name-hint" class="govuk-hint">
-                      The name or description of the dataset.
-                    </span>
-                    <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint">
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Entity name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                    Countries
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+
                   </div>
-                  <div> -->
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Entity definition
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      A list of countries and the associated names, descriptions, dial and ISO31661 alpha and numeric codes.
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="/edit_entity.html">
+                        Change
+                        <span class="govuk-visually-hidden"> date of birth</span>
+                      </a>
+                    </dd>
+                  </div>
 
-                  <h2 class="govuk-heading-l">
-                  Dataset definition
-                  </h2>
-                  <p>
-                    A list of countries and the associated names, descriptions, dial and ISO31661 alpha and numeric codes.
-                    </p>
 
-          <a href="/manage_dataset.html" role="button" draggable="false" class="govuk-button">Manage</a>
+                </form>
 
-          </div>
-                </div>
+              </div>
+            </div>
+
+            <a href="/entity_delete.html" role="button" draggable="false" class="govuk-button">Delete this entity</a>
+
           </main>
+        </div>
+
+
+          </main>
+
           </div>
 
 
