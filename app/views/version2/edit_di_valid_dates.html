@@ -59,7 +59,7 @@ Reference Data Governance Tool
     </div>
     <div class="govuk-header__content">
 
-      <a href="/index.html" class="govuk-header__link govuk-header__link--service-name">
+      <a href="/version2/index.html" class="govuk-header__link govuk-header__link--service-name">
         Reference Data Governance Tool
       </a>
 
@@ -67,12 +67,12 @@ Reference Data Governance Tool
       <nav>
         <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
           <li class="govuk-header__navigation-item">
-            <a class="govuk-header__link" href="/index.html">
+            <a class="govuk-header__link" href="/version2/index.html">
               Home
             </a>
           </li>
           <li class="govuk-header__navigation-item">
-            <a class="govuk-header__link" href="/search.html">
+            <a class="govuk-header__link" href="/version2/search.html">
               Search
             </a>
           </li>
@@ -103,45 +103,126 @@ Reference Data Governance Tool
 	</p>
 </div>
 
-          <a class="govuk-back-link" href="/index.html">Back</a>
+          <a class="govuk-back-link" href="/version2/manage_data_item.html">Back</a>
 
 
 
-          <div class="govuk-width-container">
-            <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
-              <div class="govuk-grid-row">
-                <div class="govuk-grid-column-two-thirds">
-                  <div class="govuk-panel govuk-panel--confirmation">
-                    <h1 class="govuk-panel__title">
-                      Deletion request submitted
-                    </h1>
-                    <div class="govuk-panel__body">
-                      Your reference number
-                      <br><strong>HDJ2123F</strong>
-                    </div>
-                  </div>
+          <main class="govuk-main-wrapper " id="main-content" role="main">
 
-                  <p class="govuk-body">We have sent you a confirmation email.</p>
+                        <div class="govuk-grid-row">
+                        	<div class="govuk-grid-column-two-thirds">
 
-                  <h2 class="govuk-heading-m">What happens next</h2>
+                        		<!--	<h1 class="govuk-heading-xl">Change the data item</h1> -->
+                        		<!--	<p class="govuk-body-l">Once this form has been submitted, it will be sent to the data owner selected for approval.</p> -->
 
-                  <p class="govuk-body">
-                    We’ve sent your deletion request to the data owner.
-                  </p>
-                  <p class="govuk-body">
-                    Usually they will not not need to contact you during the approval process, however occasionally they may need to contact you to ask for more information if it is required to support the request.
-                  </p>
-                  <p class="govuk-body">
-                    You will now find this request under <a href = "/index.html">My Requests</a>.
-                  </p>
+                              <div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="valid-from-hint" role="group">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+    <h1 class="govuk-fieldset__heading">
+      Change the data item
+    </h1>
 
-                  <p class="govuk-body">
-                    <a href="#" class="govuk-link">What did you think of this service?</a> (takes 30 seconds)
-                  </p>
-                </div>
-              </div>
-            </main>
-          </div>
+  </legend>
+  <h2 class="govuk-heading-l">
+    Valid From
+  </h2>
+  <span id="passport-issued-hint" class="govuk-hint">
+    For example, 01 08 2007
+  </span>
+  <div class="govuk-date-input" id="valid-from">
+    <div class="govuk-date-input__item">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-date-input__label" for="valid-from-day">
+          Day
+        </label>
+        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="valid-from-day" name="valid-from-day" type="number" pattern="[0-9]*" value="01">
+      </div>
+    </div>
+    <div class="govuk-date-input__item">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-date-input__label" for="valid-from-month">
+          Month
+        </label>
+        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="valid-from-month" name="valid-from-month" type="number" pattern="[0-9]*" value="01">
+      </div>
+    </div>
+    <div class="govuk-date-input__item">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-date-input__label" for="valid-from-year">
+          Year
+        </label>
+        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="valid-from-year" name="valid-from-year" type="number" pattern="[0-9]*" value="2019">
+      </div>
+    </div>
+  </div>
+</fieldset>
+</div>
+
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="valid-from-hint" role="group">
+<h2 class="govuk-heading-l">
+Valid To
+</h2>
+<span id="passport-issued-hint" class="govuk-hint">
+For example, 01 08 2007
+</span>
+<div class="govuk-date-input" id="valid-to">
+<div class="govuk-date-input__item">
+<div class="govuk-form-group">
+<label class="govuk-label govuk-date-input__label" for="valid-to-day">
+Day
+</label>
+<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="valid-to-day" name="valid-to-day" type="number" pattern="[0-9]*" value="01">
+</div>
+</div>
+<div class="govuk-date-input__item">
+<div class="govuk-form-group">
+<label class="govuk-label govuk-date-input__label" for="valid-to-month">
+Month
+</label>
+<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="valid-to-month" name="valid-to-month" type="number" pattern="[0-9]*" value="01">
+</div>
+</div>
+<div class="govuk-date-input__item">
+<div class="govuk-form-group">
+<label class="govuk-label govuk-date-input__label" for="valid-to-year">
+Year
+</label>
+<input class="govuk-input govuk-date-input__input govuk-input--width-4" id="valid-to-year" name="valid-to-year" type="number" pattern="[0-9]*" value="2020">
+</div>
+</div>
+</div>
+</fieldset>
+</div>
+
+
+
+
+
+
+
+
+                        	</div>
+                        </div>
+
+                        <p class=govuk-body-m> Select a change approver from the list below. </p>
+                                            <div class="govuk-form-group">
+                                                    <select class="govuk-select" id="approver" name="approver">
+                                                      <option value="null" selected="">Select an approver</option>
+                                                      <option value="ranks">Bob Smith</option>
+                                                      <option value="carrier_codes">Josh Jones</option>
+                                                      <option value="countries">Helen Rush</option>
+                                                      <option value="office_locations">Alex Logi</option>
+                                                      <option value="port_codes">Keanu Reeves</option>
+                                                    </select>
+                                                    </div>
+
+
+
+                                <a href="/version2/di_change_submission.html" role="button" draggable="false" class="govuk-button">Submit change for approval</a>
+
+          </main>
+
           </div>
 
 

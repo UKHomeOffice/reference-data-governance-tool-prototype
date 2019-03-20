@@ -1,0 +1,628 @@
+<html lang="en" class="govuk-template "><head>
+    <meta charset="utf-8">
+    <title>
+Reference Data Governance Tool
+</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b0c0c">
+
+
+      <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/assets/images/favicon.ico" type="image/x-icon">
+      <link rel="mask-icon" href="/assets/images/govuk-mask-icon.svg" color="#0b0c0c">
+      <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/govuk-apple-touch-icon-180x180.png">
+      <link rel="apple-touch-icon" sizes="167x167" href="/assets/images/govuk-apple-touch-icon-167x167.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/govuk-apple-touch-icon-152x152.png">
+      <link rel="apple-touch-icon" href="/assets/images/govuk-apple-touch-icon.png">
+
+
+
+  <!--[if lte IE 8]><link href="/public/stylesheets/application-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if gt IE 8]><!--><link href="/public/stylesheets/application.css" media="all" rel="stylesheet" type="text/css"><!--<![endif]-->
+
+
+
+
+    <meta property="og:image" content="/assets/images/govuk-opengraph-image.png">
+  </head>
+  <body class="govuk-template__body  js-enabled"><script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.26.3'><\/script>".replace("HOST", location.hostname));
+//]]></script><script async="" src="/browser-sync/browser-sync-client.js?v=2.26.3"></script>
+
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+
+
+      <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
+
+
+
+
+<!-- Blank header with no service name for the start page -->
+<header class="govuk-header " role="banner" data-module="header">
+  <div class="govuk-header__container govuk-width-container">
+
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+
+          <svg role="presentation" focusable="false" class="govuk-header__logotype-crown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 97" height="32" width="36">
+            <path fill="currentColor" fill-rule="evenodd" d="M25 30.2c3.5 1.5 7.7-.2 9.1-3.7 1.5-3.6-.2-7.8-3.9-9.2-3.6-1.4-7.6.3-9.1 3.9-1.4 3.5.3 7.5 3.9 9zM9 39.5c3.6 1.5 7.8-.2 9.2-3.7 1.5-3.6-.2-7.8-3.9-9.1-3.6-1.5-7.6.2-9.1 3.8-1.4 3.5.3 7.5 3.8 9zM4.4 57.2c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.5-1.5-7.6.3-9.1 3.8-1.4 3.5.3 7.6 3.9 9.1zm38.3-21.4c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.6-1.5-7.6.3-9.1 3.8-1.3 3.6.4 7.7 3.9 9.1zm64.4-5.6c-3.6 1.5-7.8-.2-9.1-3.7-1.5-3.6.2-7.8 3.8-9.2 3.6-1.4 7.7.3 9.2 3.9 1.3 3.5-.4 7.5-3.9 9zm15.9 9.3c-3.6 1.5-7.7-.2-9.1-3.7-1.5-3.6.2-7.8 3.7-9.1 3.6-1.5 7.7.2 9.2 3.8 1.5 3.5-.3 7.5-3.8 9zm4.7 17.7c-3.6 1.5-7.8-.2-9.2-3.8-1.5-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.3 3.5-.4 7.6-3.9 9.1zM89.3 35.8c-3.6 1.5-7.8-.2-9.2-3.8-1.4-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.4 3.6-.3 7.7-3.9 9.1zM69.7 17.7l8.9 4.7V9.3l-8.9 2.8c-.2-.3-.5-.6-.9-.9L72.4 0H59.6l3.5 11.2c-.3.3-.6.5-.9.9l-8.8-2.8v13.1l8.8-4.7c.3.3.6.7.9.9l-5 15.4v.1c-.2.8-.4 1.6-.4 2.4 0 4.1 3.1 7.5 7 8.1h.2c.3 0 .7.1 1 .1.4 0 .7 0 1-.1h.2c4-.6 7.1-4.1 7.1-8.1 0-.8-.1-1.7-.4-2.4V34l-5.1-15.4c.4-.2.7-.6 1-.9zM66 92.8c16.9 0 32.8 1.1 47.1 3.2 4-16.9 8.9-26.7 14-33.5l-9.6-3.4c1 4.9 1.1 7.2 0 10.2-1.5-1.4-3-4.3-4.2-8.7L108.6 76c2.8-2 5-3.2 7.5-3.3-4.4 9.4-10 11.9-13.6 11.2-4.3-.8-6.3-4.6-5.6-7.9 1-4.7 5.7-5.9 8-.5 4.3-8.7-3-11.4-7.6-8.8 7.1-7.2 7.9-13.5 2.1-21.1-8 6.1-8.1 12.3-4.5 20.8-4.7-5.4-12.1-2.5-9.5 6.2 3.4-5.2 7.9-2 7.2 3.1-.6 4.3-6.4 7.8-13.5 7.2-10.3-.9-10.9-8-11.2-13.8 2.5-.5 7.1 1.8 11 7.3L80.2 60c-4.1 4.4-8 5.3-12.3 5.4 1.4-4.4 8-11.6 8-11.6H55.5s6.4 7.2 7.9 11.6c-4.2-.1-8-1-12.3-5.4l1.4 16.4c3.9-5.5 8.5-7.7 10.9-7.3-.3 5.8-.9 12.8-11.1 13.8-7.2.6-12.9-2.9-13.5-7.2-.7-5 3.8-8.3 7.1-3.1 2.7-8.7-4.6-11.6-9.4-6.2 3.7-8.5 3.6-14.7-4.6-20.8-5.8 7.6-5 13.9 2.2 21.1-4.7-2.6-11.9.1-7.7 8.8 2.3-5.5 7.1-4.2 8.1.5.7 3.3-1.3 7.1-5.7 7.9-3.5.7-9-1.8-13.5-11.2 2.5.1 4.7 1.3 7.5 3.3l-4.7-15.4c-1.2 4.4-2.7 7.2-4.3 8.7-1.1-3-.9-5.3 0-10.2l-9.5 3.4c5 6.9 9.9 16.7 14 33.5 14.8-2.1 30.8-3.2 47.7-3.2z"></path>
+
+            <image src="/assets/images/govuk-logotype-crown.png" class="govuk-header__logotype-crown-fallback-image"></image>
+          </svg>
+          <span class="govuk-header__logotype-text">
+            GOV.UK
+          </span>
+        </span>
+
+      </a>
+    </div>
+    <div class="govuk-header__content">
+
+      <a href="/index.html" class="govuk-header__link govuk-header__link--service-name">
+        Reference Data Governance Tool
+      </a>
+
+      <button type="button" role="button" class="govuk-header__menu-button js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+    </div>
+  </div>
+</header>
+
+
+
+
+      <div class="govuk-width-container">
+
+<div class="govuk-phase-banner">
+	<p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
+			alpha
+		</strong>
+		<span class="govuk-phase-banner__text">
+			This is a new service – your
+			<a class="govuk-link" href="feedback.html">feedback</a> will help us to improve it.
+		</span>
+	</p>
+</div>
+
+
+<main class="govuk-main-wrapper " id="main-content" role="main">
+
+
+<style type="text/css">
+	table {
+		border-bottom-width: 0;
+		margin-bottom: 2em;
+	}
+
+	table td,
+	table th {
+		border-bottom: none;
+	}
+
+	h3.govuk-heading-m {
+		margin-top: 0;
+	}
+
+	section {
+		margin-bottom: 2em;
+		padding: 1em 0;
+	}
+
+	section.heading-xlarge {
+		margin-bottom: 0.5em;
+	}
+
+	section div.govuk-grid-row {
+		padding: 20px 10px;
+	}
+
+	section div.govuk-grid-row:nth-child(1) {
+		background-color: #005ea5;
+	}
+
+	section div.govuk-grid-row:nth-child(1) table,
+	section div.govuk-grid-row:nth-child(1) ul,
+	section div.govuk-grid-row:nth-child(1) h2,
+	section div.govuk-grid-row:nth-child(1) a {
+		color: #FFF;
+	}
+
+	section div.govuk-grid-row:nth-child(1) .govuk-table__header,
+	.govuk-table__cell {
+		border: none;
+	}
+
+	h4.heading-small:first-child {
+		margin-top: 0;
+	}
+
+	tbody {
+		vertical-align: top;
+	}
+
+	/* ul {} */
+
+	/* ul li {
+		font-weight: bold;
+	} */
+
+	ul li ul {
+		font-weight: normal;
+		/* margin-left: 1em;*/
+		margin-bottom: 1em;
+	}
+
+	/* ul li ul li {
+		font-weight: bold;
+	} */
+
+	/* ul li ul li ul {
+			margin: 1em 0 1em 1em;
+		} */
+
+	ul li ul li ul li {
+		font-weight: normal;
+	}
+</style>
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-full">
+		<h1 class="govuk-heading-l">
+			Prototypes and design iterations for the 'Reference Data Governance Tool'
+			<span class="govuk-caption-xl">Prototype kit v8.8.0</span>
+		</h1><script>console.log("v8.3.0");</script>
+	</div>
+</div>
+
+
+<section id="version3">
+	<div class="govuk-grid-row testing">
+		<div class="govuk-grid-column-one-third">
+			<h2 class="govuk-heading-l" style="margin-bottom: 0;">Version 2</h2>
+			<br>
+			<p><a class="govuk-link" href="/version2/start.html">View the prototype</a></p>
+		</div>
+
+		<div class="govuk-grid-column-two-thirds">
+			<table class="govuk-table">
+				<thead class="govuk-table__head">
+					<tr class="govuk-table__row">
+						<th class="govuk-table__header" scope="col">Tested on</th>
+						<th class="govuk-table__header" scope="col">Tested at</th>
+					</tr>
+				</thead>
+				<tbody class="govuk-table__body">
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell">
+							<ul class="govuk-list">
+								<li>25th February 2019</li>
+								<li>15th February 2019</li>
+								<li>11th February 2019</li>
+								<li>28th January 2019</li>
+								<li>23rd January 2019</li>
+								<li>23rd January 2019</li>
+								<li>22nd January 2019</li>
+								<li>17th January 2019</li>
+							</ul>
+						</td>
+						<td class="govuk-table__cell">
+							<ul class="govuk-list">
+								<li>Stansted (5 users booked)</li>
+								<li>Vauxhall - CT Policing (5 user)</li>
+								<li>RAF Leuchars (2 users)</li>
+								<li>Stansted (3 users)</li>
+								<li>Luton (3 users)</li>
+								<li>Fairoaks - Internal (2 user)</li>
+								<li>Heathrow (2 users)</li>
+								<li>Redhill (2 users)</li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<div class="govuk-grid-row features">
+		<div class="govuk-grid-column-one-third">
+			<h3 class="govuk-heading-m">New features</h3>
+		</div>
+		<div class="govuk-grid-column-two-thirds">
+			<h4 class="govuk-heading-s">Complete restructure of the information architecture. Removed duplicate content and redesigned navigation</h4>
+			<ul class="govuk-list">
+				<!-- <li><a href="version3/start-option-1.html">Start (option 1)</a>
+					<ul>
+						<li><a href="version3/other-ways-to-submit-a-gar.html">Other ways to submit a GAR</a></li>
+					</ul>
+				</li> -->
+				<li><a href="version3/start-option-2.html">Start</a>
+					<ul>
+						<li><a href="version3/sign-in.html">Sign in</a>
+						</li><li><a href="version3/sign-in-alt-1.html">Sign in (Alternative 1)</a>
+							<ul>
+									<li><a href="version3/register.html">Register
+										</a><ul><a href="version3/register.html">
+											</a><li><a href="version3/register.html"></a><a href="version3/register-confirmation.html">Register - Confirm submission</a></li>
+										</ul>
+
+								</li><li><a href="version3/multi-factor-authentication-setup.html">Multi factor authentication - Setup</a>
+										<ul>
+											<li><a href="version3/multi-factor-authentication-confirmation.html">Multi factor authentication - Confirmation</a></li>
+											<li><a href="version3/multi-factor-authentication-success.html">Multi factor authentication - Success</a></li>
+										</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<!-- <li>Dashboard
+					<ul>
+						<li><a href="version3/dashboard-unverified.html">Dashboard - Unverified</a></li>
+						<li><a href="version3/dashboard-verified.html">Dashboard - Verified</a></li>
+					</ul>
+				</li> -->
+				<!-- <li>Management -->
+					<ul class="govuk-list">
+						<li><a href="version3/gar-manage-none-previously-created.html">GARs (none previously submitted)</a></li>
+						<li><a href="version3/gar-manage.html">GARs</a></li>
+						<!-- <li><a href="version3/gar-manage-option2.html">Manage GARs (option 2)</a></li> -->
+							<ul>
+								<li>Create a GAR
+									<ul>
+										<li><a href="version3/create-gar-landing.html">Create GAR - Landing</a></li>
+										<li><a href="version3/create-gar-departure.html">Create GAR - Departure</a></li>
+										<li><a href="version3/create-gar-arrival.html">Create GAR - Arrival</a></li>
+										<li><a href="version3/create-gar-craft.html">Create GAR - Aircraft</a></li>
+										<li><a href="version3/create-gar-manifest.html">Create GAR - Manifest</a>
+											<ul>
+												<li><a href="version3/create-gar-add-saved-person.html">Create GAR - Add saved person</a></li>
+												<li><a href="version3/create-gar-add-new-person.html">Create GAR - Add new person</a></li>
+											</ul>
+										</li>
+										<li><a href="version3/create-gar-responsible-person.html">Create GAR - Responsible person</a></li>
+										<li><a href="version3/create-gar-customs.html">Create GAR - Customs</a></li>
+										<li><a href="version3/create-gar-supporting-documents.html">Create GAR - Supporting documents</a></li>
+										<li><a href="version3/create-gar-check-your-answers.html">Create GAR - Check your answers</a>
+										    <ul>
+										    	<li><a href="version3/create-gar-check-your-answers.html">Create GAR - Check your answers (option 2)</a></li>
+										    </ul>
+										</li>
+										<li><a href="version3/create-gar-confirmation.html">Create GAR - Confirm submission</a></li>
+									</ul>
+								</li>
+							</ul>
+
+						<li><a href="version3/aircraft.html">Aircraft</a>
+							<ul>
+								<li><a href="version3/aircraft-save.html">Save aircraft</a></li>
+								<li><a href="version3/aircraft-edit.html">Edit aircraft</a></li>
+							</ul>
+						</li>
+						<li><a href="version3/people.html">People</a>
+							<ul>
+								<li><a href="version3/person-save.html">Save person</a></li>
+								<li><a href="version3/person-edit.html">Edit person</a></li>
+							</ul>
+						</li>
+						<li><a href="version3/organisation.html">Organisation</a>
+							<ul>
+        				<li><a href="version3/organisation-v2.html">Organisation (option 2)</a></li>
+								<li><a href="version3/organisation-create.html">Create organisation</a></li>
+								<li><a href="version3/organisation-edit.html">Edit organisation details</a></li>
+								<li><a href="version3/organisation-add-users.html">Add user(s) to organisation</a></li>
+								<li><a href="version3/organisation-user-edit.html">Manage user details</a></li>
+							</ul>
+						</li>
+						<li><a href="version3/account.html">Manage Account</a>
+							<ul>
+								<li><a href="version3/account-edit.html">Edit account</a></li>
+							</ul>
+						</li>
+						<li><a href="version3/feedback.html">Feedback</a></li>
+					</ul>
+			</ul>
+		</div>
+	</div>
+
+	<div class="govuk-grid-row enhancements">
+		<div class="govuk-grid-column-one-third">
+			<h3 class="govuk-heading-m">Enhancements</h3>
+		</div>
+		<div class="govuk-grid-column-two-thirds">
+			<h4 class="govuk-heading-s">Miscellaneous</h4>
+			<ul class="govuk-list govuk-list--bullet">
+				<li>Main navigation changed throughout</li>
+				<li>GAR page is new Home for user rather than extraneous Dashboard page</li>
+				<li>Alpha banners changed to Beta as in Private Beta</li>
+				<li>Back links removed from top level navigation</li>
+				<li>Changed column order to show surname first and sort table by it</li>
+				<li>Removed references to password to match current log in implementation</li>
+				<li>More descriptive title tags added throughout</li>
+				<li>Content changes throughout</li>
+			</ul>
+
+			<h4 class="govuk-heading-s">Sign in</h4>
+			<ul class="govuk-list govuk-list--bullet">
+				<li>Variation of sign in page created following confusion by users during private beta over registration process</li>
+			</ul>
+
+			<h4 class="govuk-heading-s">Create GAR - Manifest</h4>
+			<ul class="govuk-list govuk-list--bullet">
+				<li>Changed component to add saved users to a GAR. Now a multi select table with the ability to select all and a button to submit.</li>
+				<li>Changed the view of the current manifest from a long table that ran off the page to a compavt version with 'Further information' disclosure toggles.</li>
+				<li>Changed spacing, added section breaks to aid legibility</li>
+			</ul>
+
+			<h4 class="govuk-heading-s">Create GAR - Customs</h4>
+			<ul class="govuk-list govuk-list--bullet">
+					<li>Prohibited goods questions page changed to 'Customs' with all customs questions added to it.</li>
+					<li>Ben's preferred wording included for declaration question</li>
+					<li>Free circulation question changed from a text box to a radio button.</li>
+			</ul>
+
+			<h4 class="govuk-heading-s">GARs</h4>
+			<ul class="govuk-list govuk-list--bullet">
+				<li>The new home page allowing users to create a GAR and if any previous GARs have been started the user can manage or edit them from here</li>
+				<li>Manage GAR section changed to a tab interface that separates 'Draft', 'Submitted' and 'Cancelled'</li>
+				<li>Pagination added to table to show when rows total more than 10</li>
+			</ul>
+			<h4 class="govuk-heading-s">Aircraft</h4>
+			<ul class="govuk-list govuk-list--bullet">
+				<li>Pulled out as a top level navigation item applicable to accounts and associated oganisation</li>
+				<li>Removed 'Edit' links to use Reg number to view details</li>
+				<li>Pagination added to table to show when rows total more than 10</li>
+			</ul>
+			<h4 class="govuk-heading-s">People</h4>
+			<ul class="govuk-list govuk-list--bullet">
+				<li>Pulled out as a top level navigation item applicable to accounts and associated oganisation</li>
+				<li>Removed 'Edit' links to use Surname to view details</li>
+				<li>Pagination added to table to show when rows total more than 10</li>
+			</ul>
+			<h4 class="govuk-heading-s">Organisation</h4>
+			<ul class="govuk-list govuk-list--bullet">
+				<li>Changed page contents, removed duplicate 'People' and 'Craft' tabs</li>
+				<li>Removed 'Edit' links to use Surname to view details</li>
+				<li>Pagination added to users table to show when rows total more than 10</li>
+			</ul>
+			<h4 class="govuk-heading-s">Account</h4>
+			<ul class="govuk-list govuk-list--bullet">
+					<li>Changed page contents, removed duplicate 'People' and 'Craft' tabs</li>
+			</ul>
+			<h4 class="govuk-heading-s">Craft details</h4>
+			<ul class="govuk-list govuk-list--bullet">
+					<li>Customs questions removed</li>
+			</ul>
+		</div>
+</div>
+
+	<!--
+	<div class="govuk-grid-row fixes">
+		<div class="govuk-grid-column-one-third">
+			<h3 class="govuk-heading-m">Fixes</h3>
+		</div>
+		<div class="govuk-grid-column-two-thirds">
+			<h4 class="govuk-heading-s">Miscellaneous</h4>
+			<ul class="list list-bullet">
+				<li></li>
+			</ul>
+		</div>
+	</div> -->
+</section>
+
+<section id="version1">
+	<div class="govuk-grid-row testing">
+		<div class="govuk-grid-column-one-third">
+			<h2 class="govuk-heading-l" style="margin-bottom: 0;">Version 1</h2>
+			<br>
+			<p><a class="govuk-link" href="/version1/start.html">View the prototype</a></p>
+		</div>
+
+		<div class="govuk-grid-column-two-thirds">
+			<table class="govuk-table">
+				<thead class="govuk-table__head">
+					<tr class="govuk-table__row">
+						<th class="govuk-table__header" scope="col">Tested on</th>
+						<th class="govuk-table__header" scope="col">Tested at</th>
+					</tr>
+				</thead>
+				<tbody class="govuk-table__body">
+					<tr class="govuk-table__row">
+						<td class="govuk-table__cell">
+							<ul class="govuk-list">
+								<li>18th March 2019</li>
+								<li>11th March 2019</li>
+							</ul>
+						</td>
+						<td class="govuk-table__cell">
+							<ul class="govuk-list">
+								<li>Show and Tell - Business (6 users)</li>
+								<li>Internal review (4 users)</li>
+							</ul>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<div class="govuk-grid-row features">
+		<div class="govuk-grid-column-one-third">
+			<h3 class="govuk-heading-m">New features</h3>
+		</div>
+		<div class="govuk-grid-column-two-thirds">
+			<h4 class="govuk-heading-s">Initial build of the prototype</h4>
+			<ul class="govuk-list">
+				<li><a href="/version1/start.html">Start (Service start page)</a>
+					<ul>
+						<li><a href="/version1/signin.html">Sign in (Keycloak theme mockup & admin login)</a>
+						</li>
+					</ul>
+			</li>
+				<li>Homepage
+					<ul>
+						<li><a href="/index.html">Homepage</a></li>
+            <ul>
+              <li><a href="/search.html">Search</a></li>
+            </ul>
+					</ul>
+				</li>
+				<li>Search
+					<ul>
+						<li><a href="/search.html">Search</a></li>
+						<li><a href="version2/manage-account.html">Manage Account</a>
+							<ul>
+								<li><a href="version2/organisation-save-craft.html">Save a craft</a></li>
+							</ul>
+						</li>
+						<li><a href="version2/organisation-manage.html">Manage Organisation</a></li>
+						<li><a href="version2/organisation-create-1.html">Create organisation</a></li>
+					</ul>
+				</li>
+				<li>Create a GAR
+					<ul>
+						<li><a href="version2/create-gar-landing.html">Create GAR - Landing</a></li>
+						<li><a href="version2/create-gar-departure.html">Create GAR - Departure</a></li>
+						<li><a href="version2/create-gar-arrival.html">Create GAR - Arrival</a></li>
+						<li><a href="version2/create-gar-craft.html">Create GAR - Craft</a></li>
+						<li><a href="version2/create-gar-manifest.html">Create GAR - Manifest</a>
+							<ul>
+								<li><a href="version2/create-gar-add-saved-person.html">Create GAR - Add saved person</a></li>
+								<li><a href="version2/create-gar-add-new-person.html">Create GAR - Add new person</a></li>
+							</ul>
+						</li>
+						<li><a href="version2/create-gar-responsible-person.html">Create GAR - Responsible person</a></li>
+						<li><a href="version2/create-gar-prohibited-goods.html">Create GAR - Prohibited goods</a></li>
+						<li><a href="version2/create-gar-supporting-documents.html">Create GAR - Supporting documents</a></li>
+						<li><a href="version2/create-gar-check-your-answers.html">Create GAR - Check your answers</a></li>
+						<li><a href="version2/create-gar-confirmation.html">Create GAR - Confirm submission</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="govuk-grid-row enhancements">
+		<div class="govuk-grid-column-one-third">
+			<h3 class="govuk-heading-m">Enhancements</h3>
+		</div>
+		<div class="govuk-grid-column-two-thirds">
+			<h4 class="govuk-heading-s">Start page</h4>
+			<ul class="govuk-list govuk-list--bullet">
+				<li>Two variations created following feedback from content designer</li>
+			</ul>
+			<h4 class="govuk-heading-s">Create GAR - Departure</h4>
+			<ul class="govuk-list govuk-list--bullet">
+				<li>Changes to wording and layout tweaks</li>
+			</ul>
+			<h4 class="govuk-heading-s">Create GAR - Arrival</h4>
+			<ul class="govuk-list govuk-list--bullet">
+				<li>Changes to wording and layout tweaks</li>
+			</ul>
+			<h4 class="govuk-heading-s">Manage GARs</h4>
+			<ul class="govuk-list govuk-list--bullet">
+				<li>Refinements to page design</li>
+				<li>Made Reg the link to details and removed 'View' action links</li>
+			</ul>
+			<h4 class="govuk-heading-s">Manage account</h4>
+			<ul class="govuk-list govuk-list--bullet">
+				<li>Refinements to page design</li>
+				<li>Changed table layout of account details and edit/delete links</li>
+			</ul>
+			<h4 class="govuk-heading-s">Create organisation</h4>
+			<ul class="govuk-list govuk-list--bullet">
+				<li>Refinements to page design</li>
+			</ul>
+			<h4 class="govuk-heading-s">Miscellaneous</h4>
+			<ul class="govuk-list govuk-list--bullet">
+				<li>Main navigation changed throughout</li>
+			</ul>
+		</div>
+	</div>
+
+	<!--
+	<div class="govuk-grid-row fixes">
+		<div class="govuk-grid-column-one-third">
+			<h3 class="govuk-heading-m">Fixes</h3>
+		</div>
+		<div class="govuk-grid-column-two-thirds">
+			<h4 class="govuk-heading-s">Miscellaneous</h4>
+			<ul class="list list-bullet">
+				<li></li>
+			</ul>
+		</div>
+	</div> -->
+</section>
+
+
+
+
+
+        </main>
+
+
+      </div>
+    </div>
+
+
+
+    <footer class="govuk-footer " role="contentinfo">
+  <div class="govuk-width-container ">
+
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+
+            <h2 class="govuk-visually-hidden">Support links</h2>
+            <ul class="govuk-footer__inline-list">
+
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="https://govuk-prototype-kit.herokuapp.com/">
+                    GOV.UK Prototype Kit v8.3.0
+                  </a>
+                </li>
+
+                <li class="govuk-footer__inline-list-item">
+                  <a class="govuk-footer__link" href="/prototype-admin/clear-data">
+                    Clear data
+                  </a>
+                </li>
+
+            </ul>
+
+
+
+        <svg role="presentation" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41">
+          <path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path>
+        </svg>
+        <span class="govuk-footer__licence-description">
+          All content is available under the
+          <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a>, except where otherwise stated
+        </span>
+      </div>
+      <div class="govuk-footer__meta-item">
+        <a class="govuk-footer__link govuk-footer__copyright-logo" href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">© Crown copyright</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+    <!-- Javascript -->
+<script src="/public/javascripts/jquery-1.11.3.js"></script>
+<script src="/node_modules/govuk-frontend/all.js"></script>
+<script src="/public/javascripts/table-multiselect.js"></script>
+<script src="/public/javascripts/application.js"></script>
+
+
+  <script src="/public/javascripts/auto-store-data.js"></script>
+
+
+
+
+  <!-- GOV.UK Prototype Kit v8.3.0 -->
+
+
+
+</body></html>

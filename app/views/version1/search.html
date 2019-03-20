@@ -59,7 +59,7 @@ Reference Data Governance Tool
     </div>
     <div class="govuk-header__content">
 
-      <a href="/index.html" class="govuk-header__link govuk-header__link--service-name">
+      <a href="/version1/index.html" class="govuk-header__link govuk-header__link--service-name">
         Reference Data Governance Tool
       </a>
 
@@ -67,12 +67,12 @@ Reference Data Governance Tool
       <nav>
         <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
           <li class="govuk-header__navigation-item">
-            <a class="govuk-header__link" href="/index.html">
+            <a class="govuk-header__link" href="/version1/index.html">
               Home
             </a>
           </li>
-          <li class="govuk-header__navigation-item">
-            <a class="govuk-header__link" href="/search.html">
+          <li class="govuk-header__navigation-item  govuk-header__navigation-item--active">
+            <a class="govuk-header__link" href="/version1/search.html">
               Search
             </a>
           </li>
@@ -103,95 +103,79 @@ Reference Data Governance Tool
 	</p>
 </div>
 
-          <a class="govuk-back-link" href="/manage_data_item.html">Back</a>
-
-
-
+          <a class="govuk-back-link" href="/version1/index.html">Back</a>
           <main class="govuk-main-wrapper " id="main-content" role="main">
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-two-thirds">
 
-                        <div class="govuk-grid-row">
-                        	<div class="govuk-grid-column-two-thirds">
+                  <form action="/version1/search_results.html">
+                  			<h1 class="govuk-heading-xl">Reference data search</h1>
 
-                        			<h1 class="govuk-heading-xl">Change the data item</h1>
-                        			<p class="govuk-body-l">Once this form has been submitted, it will be sent to the data owner selected for approval.</p>
-                        				<div class="govuk-form-group">
-                        					<label class="govuk-label" for="id">
-                        						ID
-                        					</label>
-                        					<span id="id-hint" class="govuk-hint">
-                        						An identifier for the data item, for example TW
-                        					</span>
-                        					<input class="govuk-input" id="id" name="name" type="text" value="TW">
-                        				</div>
+                        <p class=govuk-body-m>
+                          Select a specific entity to manage from the list below
+                          </p>
 
-                        				<div class="govuk-form-group">
-                        					<label class="govuk-label" for="iso31661alpha3">
-                        						ISO 3166-1 Alpha Code
-                        					</label>
-                        					<span id="iso31661alpha3-hint" class="govuk-hint">
-                        						The 3 digit ISO alpha code for the country, for example TWN
-                        					</span>
-                        					<input class="govuk-input" id="iso31661alpha3" name="iso31661alpha3" type="text" value="TWN">
-                        				</div>
 
-                        				<div class="govuk-form-group">
-                        					<label class="govuk-label" for="name">
-                        						Name
-                        					</label>
-                        					<span id="homeUsualBase-hint" class="govuk-hint">
-                        						The name of the country
-                        					</span>
-                        					<input class="govuk-input" id="name" name="name" type="text" value="Taiwan">
-                        				</div>
-                                <div class="govuk-form-group">
-                                  <label class="govuk-label" for="continent">
-                                    Continent
-                                  </label>
-                                  <span id="continent-hint" class="govuk-hint">
-                                    The 2 digit ISO alpha code for the contninet the country is in, for exmaple AS
-                                  </span>
-                                  <input class="govuk-input" id="continent" name="name" type="text" value="AS">
-                                </div>
-                                <div class="govuk-form-group">
-                                  <label class="govuk-label" for="dial">
-                                    Dialling Code
-                                  </label>
-                                  <span id="dial-hint" class="govuk-hint">
-                                    The international dialling code for the country, for example 886
-                                  </span>
-                                  <input class="govuk-input" id="dial" name="name" type="text" value="886">
-                                </div>
-                                <div class="govuk-form-group">
-                                  <label class="govuk-label" for="iso31661numeric">
-                                    ISO 3166-1 Numeric Code
-                                  </label>
-                                  <span id="iso31661numeric-hint" class="govuk-hint">
-                                    The 3 digit ISO numeric code for the country, for example 158
-                                  </span>
-                                  <input class="govuk-input" id="iso31661numeric" name="name" type="text" value="158">
-                                </div>
+                            <div class="govuk-form-group">
+                                    <select class="govuk-select" id="entity" name="entity">
+                                      <option value="null" selected="">Countries</option>
+                                      <option value="ranks">Border Force Ranks</option>
+                                      <option value="carrier_codes">Carrier Codes</option>
+                                      <option value="countries">Countries</option>
+                                      <option value="office_locations">Office Locations</option>
+                                      <option value="port_codes">Port Codes</option>
+                                    </select>
+                                    </div>
+<p class=govuk-body-m> Or build a search query to search for specific values across all entities. </p>
+                          <div class="govuk-form-group">
 
-                        	</div>
-                        </div>
+                            <label class="govuk-label" for="search">
+          Search value
+        </label>
+                            <span id="searchValue-hint" class="govuk-hint">
+            For example, a name or description of an entity
+          </span>
+<input class="govuk-input" id="search" name="name" type="text">
 
-                        <p class=govuk-body-m> Select a change approver from the list below. </p>
-                                            <div class="govuk-form-group">
-                                                    <select class="govuk-select" id="approver" name="approver">
-                                                      <option value="null" selected="">Select an approver</option>
-                                                      <option value="ranks">Bob Smith</option>
-                                                      <option value="carrier_codes">Josh Jones</option>
-                                                      <option value="countries">Helen Rush</option>
-                                                      <option value="office_locations">Alex Logi</option>
-                                                      <option value="port_codes">Keanu Reeves</option>
-                                                    </select>
-                                                    </div>
+<label class="govuk-label" for="search">
+Select an operator
+</label>
+</span>
+<select class="govuk-select" id="entity" name="entity">
+<option value="null" selected="">In</option>
+<option value="ranks">Contains</option>
+<option value="carrier_codes">Does not equal</option>
+<option value="countries">Equals</option>
+<option value="office_locations">Not in</option>
+</select>
 
 
 
-                                <a href="/di_change_submission.html" role="button" draggable="false" class="govuk-button">Submit change for approval</a>
+                            <label class="govuk-label" for="search">
+					Pick an entity
+				</label>
+        <select class="govuk-select" id="entity" name="entity">
+          <option value="null" selected="">Countries</option>
+          <option value="ranks">Border Force Ranks</option>
+          <option value="carrier_codes">Carrier Codes</option>
+          <option value="countries">Countries</option>
+          <option value="office_locations">Office Locations</option>
+          <option value="port_codes">Port Codes</option>
+        </select>
 
+
+
+
+
+</div>
+                  <a href="/version1/search_results.html" role="button" draggable="false" class="govuk-button">Search</a>
+
+
+                  		</form>
+
+          </div>
+                </div>
           </main>
-
           </div>
 
 
@@ -211,7 +195,6 @@ Reference Data Governance Tool
                     GOV.UK Prototype Kit v8.3.0
                   </a>
                 </li>
-
 
                 <li class="govuk-footer__inline-list-item">
                   <a class="govuk-footer__link" href="/prototype-admin/clear-data">
