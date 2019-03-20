@@ -1,12 +1,38 @@
+<html lang="en" class="govuk-template "><head>
+    <meta charset="utf-8">
+    <title>
+Reference Data Governance Tool
+</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b0c0c">
 
-{% extends "layout.html" %}
 
-{% block pageTitle %}
-  GOV.UK Prototype Kit
-{% endblock %}
+      <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/assets/images/favicon.ico" type="image/x-icon">
+      <link rel="mask-icon" href="/assets/images/govuk-mask-icon.svg" color="#0b0c0c">
+      <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/govuk-apple-touch-icon-180x180.png">
+      <link rel="apple-touch-icon" sizes="167x167" href="/assets/images/govuk-apple-touch-icon-167x167.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/govuk-apple-touch-icon-152x152.png">
+      <link rel="apple-touch-icon" href="/assets/images/govuk-apple-touch-icon.png">
 
-{% block header %}
-{% from "header/macro.njk" import govukHeader %}
+
+
+  <!--[if lte IE 8]><link href="/public/stylesheets/application-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if gt IE 8]><!--><link href="/public/stylesheets/application.css" media="all" rel="stylesheet" type="text/css"><!--<![endif]-->
+
+
+
+
+    <meta property="og:image" content="/assets/images/govuk-opengraph-image.png">
+  </head>
+  <body class="govuk-template__body  js-enabled"><script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.26.3'><\/script>".replace("HOST", location.hostname));
+//]]></script><script async="" src="/browser-sync/browser-sync-client.js?v=2.26.3"></script>
+
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+
+
+      <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
 
 <header class="govuk-header " role="banner" data-module="header">
   <div class="govuk-header__container govuk-width-container">
@@ -28,7 +54,7 @@
     </div>
     <div class="govuk-header__content">
 
-      <a href="/version1/index.html" class="govuk-header__link govuk-header__link--service-name">
+      <a href="/version1/home.html" class="govuk-header__link govuk-header__link--service-name">
         Reference Data Governance Tool
       </a>
 
@@ -36,7 +62,7 @@
       <nav>
         <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
           <li class="govuk-header__navigation-item">
-            <a class="govuk-header__link" href="/version1/index.html">
+            <a class="govuk-header__link" href="/version1/home.html">
               Home
             </a>
           </li>
@@ -55,29 +81,6 @@
     </div>
   </div>
 </header>
-
-<!--{{ govukHeader({
-  homepageUrl: "/index.html",
-  serviceName: "Reference Data Service",
-  serviceUrl: "#",
-  navigation: [
-    {
-      href: "/index.html",
-      text: "Home"
-    },
-    {
-      href: "#3",
-      text: "Account"
-    },
-    {
-      href: "#4",
-      text: "Sign out"
-    }
-  ]
-}) }} -->
-{% endblock %}
-
-{% block content %}
 <div class="govuk-width-container">
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content"><strong class="govuk-tag govuk-phase-banner__content__tag ">
@@ -191,4 +194,3 @@
 </table>
 </main>
 </div>
-{% endblock %}
