@@ -57,33 +57,7 @@ Reference Data Governance Tool
 
       </a>
     </div>
-    <div class="govuk-header__content">
 
-      <a href="/index.html" class="govuk-header__link govuk-header__link--service-name">
-        Reference Data Governance Tool
-      </a>
-
-      <button type="button" role="button" class="govuk-header__menu-button js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
-      <nav>
-        <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
-          <li class="govuk-header__navigation-item">
-            <a class="govuk-header__link" href="/index.html">
-              Home
-            </a>
-          </li>
-          <li class="govuk-header__navigation-item  govuk-header__navigation-item--active">
-            <a class="govuk-header__link" href="/search.html">
-              Search
-            </a>
-          </li>
-          <li class="govuk-header__navigation-item">
-            <a class="govuk-header__link" href="#3">
-              Signout
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
   </div>
 </header>
 
@@ -103,80 +77,63 @@ Reference Data Governance Tool
 	</p>
 </div>
 
-          <a class="govuk-back-link" href="/index.html">Back</a>
-          <main class="govuk-main-wrapper " id="main-content" role="main">
-            <div class="govuk-grid-row">
-              <div class="govuk-grid-column-two-thirds">
+        <main class="govuk-main-wrapper " id="main-content" role="main">
 
-                  <form action="/search_results.html">
-                  			<h1 class="govuk-heading-xl">Reference data search</h1>
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
 
-                        <p class=govuk-body-m>
-                          Select a specific entity to manage from the list below
-                          </p>
+		<h1 class="govuk-heading-xl">
+			 Reference Data Governance Tool
+		</h1>
 
+		<p>Use this service to:</p>
 
-                            <div class="govuk-form-group">
-                                    <select class="govuk-select" id="entity" name="entity">
-                                      <option value="null" selected="">Countries</option>
-                                      <option value="ranks">Border Force Ranks</option>
-                                      <option value="carrier_codes">Carrier Codes</option>
-                                      <option value="countries">Countries</option>
-                                      <option value="office_locations">Office Locations</option>
-                                      <option value="port_codes">Port Codes</option>
-                                    </select>
-                                    </div>
-<p class=govuk-body-m> Or build a search query to search for specific values across all entities. </p>
-                          <div class="govuk-form-group">
+		<ul class="govuk-list govuk-list--bullet">
+			<li>Search for reference data owned by Border Force</li>
+			<li>Request changes to datasets</li>
+			<li>Request new datasets, or the deletion of existing datasets</li>
+		</ul>
 
-                            <label class="govuk-label" for="search">
-          Search value
-        </label>
-                            <span id="searchValue-hint" class="govuk-hint">
-            For example, a name or description of an entity
-          </span>
-<input class="govuk-input" id="search" name="name" type="text">
+		<a href="/version2/signin.html" role="button" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8">Start
+			now</a>
 
-<label class="govuk-label" for="search">
-Select an operator
-</label>
-</span>
-<select class="govuk-select" id="entity" name="entity">
-<option value="null" selected="">In</option>
-<option value="ranks">Contains</option>
-<option value="carrier_codes">Does not equal</option>
-<option value="countries">Equals</option>
-<option value="office_locations">Not in</option>
-</select>
+		<div class="govuk-tabs" data-module="tabs">
+			<h2 class="govuk-tabs__title">
+				Contents
+			</h2>
+		</div>
+	</div>
+	<div class="govuk-grid-column-one-third">
+		<aside class="app-related-items" role="complementary">
+			<h2 class="govuk-heading-m" id="subsection-title">
+				Related content
+			</h2>
+			<nav role="navigation" aria-labelledby="subsection-title">
+				<ul class="govuk-list govuk-!-font-size-16">
+					<li>
+						<a href="#">
+							Reference Data Guidance
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							How to request access to a dataset
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							How to inform us of a change in dataset ownership
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</aside>
 
-
-
-                            <label class="govuk-label" for="search">
-					Pick an entity
-				</label>
-        <select class="govuk-select" id="entity" name="entity">
-          <option value="null" selected="">Countries</option>
-          <option value="ranks">Border Force Ranks</option>
-          <option value="carrier_codes">Carrier Codes</option>
-          <option value="countries">Countries</option>
-          <option value="office_locations">Office Locations</option>
-          <option value="port_codes">Port Codes</option>
-        </select>
-
-
-
-
-
+	</div>
 </div>
-                  <a href="/search_results.html" role="button" draggable="false" class="govuk-button">Search</a>
 
-
-                  		</form>
-
-          </div>
-                </div>
-          </main>
-          </div>
+        </main>
+      </div>
 
 
 

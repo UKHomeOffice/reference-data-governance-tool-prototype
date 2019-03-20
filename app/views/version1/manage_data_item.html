@@ -59,7 +59,7 @@ Reference Data Governance Tool
     </div>
     <div class="govuk-header__content">
 
-      <a href="/index.html" class="govuk-header__link govuk-header__link--service-name">
+      <a href="/version1/index.html" class="govuk-header__link govuk-header__link--service-name">
         Reference Data Governance Tool
       </a>
 
@@ -67,12 +67,12 @@ Reference Data Governance Tool
       <nav>
         <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
           <li class="govuk-header__navigation-item">
-            <a class="govuk-header__link" href="/index.html">
+            <a class="govuk-header__link" href="/version1/index.html">
               Home
             </a>
           </li>
           <li class="govuk-header__navigation-item">
-            <a class="govuk-header__link" href="/search.html">
+            <a class="govuk-header__link" href="/version1/search.html">
               Search
             </a>
           </li>
@@ -103,125 +103,155 @@ Reference Data Governance Tool
 	</p>
 </div>
 
-          <a class="govuk-back-link" href="/manage_data_item.html">Back</a>
-
-
-
+          <a class="govuk-back-link" href="/version1/search_results.html">Back</a>
           <main class="govuk-main-wrapper " id="main-content" role="main">
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-two-thirds-from-desktop">
 
-                        <div class="govuk-grid-row">
-                        	<div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-xl">Taiwan</h1>
 
-                        		<!--	<h1 class="govuk-heading-xl">Change the data item</h1> -->
-                        		<!--	<p class="govuk-body-l">Once this form has been submitted, it will be sent to the data owner selected for approval.</p> -->
+  <h2 class="govuk-heading-m">Metadata</h2>
+  <p>
+    This is data that describes the data item, for example how long the data item remains valid for. If a data item is invalid, it will not appear in search results.
+    </p>
 
-                              <div class="govuk-form-group">
-<fieldset class="govuk-fieldset" aria-describedby="valid-from-hint" role="group">
-  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-    <h1 class="govuk-fieldset__heading">
-      Change the data item
-    </h1>
-
-  </legend>
-  <h2 class="govuk-heading-l">
-    Valid From
-  </h2>
-  <span id="passport-issued-hint" class="govuk-hint">
-    For example, 01 08 2007
-  </span>
-  <div class="govuk-date-input" id="valid-from">
-    <div class="govuk-date-input__item">
-      <div class="govuk-form-group">
-        <label class="govuk-label govuk-date-input__label" for="valid-from-day">
-          Day
-        </label>
-        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="valid-from-day" name="valid-from-day" type="number" pattern="[0-9]*" value="01">
-      </div>
+  <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Valid From
+      </dt>
+      <dd class="govuk-summary-list__value">
+      01/01/2019
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="/version1/edit_di_valid_dates.html">
+          Change
+          <span class="govuk-visually-hidden"> name</span>
+        </a>
+      </dd>
     </div>
-    <div class="govuk-date-input__item">
-      <div class="govuk-form-group">
-        <label class="govuk-label govuk-date-input__label" for="valid-from-month">
-          Month
-        </label>
-        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="valid-from-month" name="valid-from-month" type="number" pattern="[0-9]*" value="01">
-      </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Valid To
+      </dt>
+      <dd class="govuk-summary-list__value">
+      01/01/2020
+      </dd>
+      <dd class="govuk-summary-list__actions">
+        <a class="govuk-link" href="/version1/edit_di_valid_dates.html">
+          Change
+          <span class="govuk-visually-hidden"> name</span>
+        </a>
+      </dd>
     </div>
-    <div class="govuk-date-input__item">
-      <div class="govuk-form-group">
-        <label class="govuk-label govuk-date-input__label" for="valid-from-year">
-          Year
-        </label>
-        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="valid-from-year" name="valid-from-year" type="number" pattern="[0-9]*" value="2019">
-      </div>
-    </div>
-  </div>
-</fieldset>
-</div>
+</dl>
 
-<div class="govuk-form-group">
-<fieldset class="govuk-fieldset" aria-describedby="valid-from-hint" role="group">
-<h2 class="govuk-heading-l">
-Valid To
-</h2>
-<span id="passport-issued-hint" class="govuk-hint">
-For example, 01 08 2007
-</span>
-<div class="govuk-date-input" id="valid-to">
-<div class="govuk-date-input__item">
-<div class="govuk-form-group">
-<label class="govuk-label govuk-date-input__label" for="valid-to-day">
-Day
-</label>
-<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="valid-to-day" name="valid-to-day" type="number" pattern="[0-9]*" value="01">
-</div>
-</div>
-<div class="govuk-date-input__item">
-<div class="govuk-form-group">
-<label class="govuk-label govuk-date-input__label" for="valid-to-month">
-Month
-</label>
-<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="valid-to-month" name="valid-to-month" type="number" pattern="[0-9]*" value="01">
-</div>
-</div>
-<div class="govuk-date-input__item">
-<div class="govuk-form-group">
-<label class="govuk-label govuk-date-input__label" for="valid-to-year">
-Year
-</label>
-<input class="govuk-input govuk-date-input__input govuk-input--width-4" id="valid-to-year" name="valid-to-year" type="number" pattern="[0-9]*" value="2020">
-</div>
-</div>
-</div>
-</fieldset>
-</div>
+          <!--      <div class="govuk-grid-row">
+              <div class="govuk-grid-column-full">
+              <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl govuk-!-margin-top-0">
+              </div>
+            </div>  -->
+
+                <h2 class="govuk-heading-m">Fields</h2>
+                <p>
+                  A list of fields that make up this data item. Click the change link to request changes to individual fields.
+                  </p>
+
+                <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      ID
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                    TW
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="/version1/edit_data_item.html">
+                        Change
+                        <span class="govuk-visually-hidden"> ID</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      ISO 3166-1 Alpha Code
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      TWN
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="/version1/edit_data_item.html">
+                        Change
+                        <span class="govuk-visually-hidden"> iso31661alpha3</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Name
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      Taiwan
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="/version1/edit_data_item.html">
+                        Change
+                        <span class="govuk-visually-hidden"> Name</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Continent
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      AS
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="/version1/edit_data_item.html">
+                        Change
+                        <span class="govuk-visually-hidden"> Continent</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      Dialling Code
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      886
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="/version1/edit_data_item.html">
+                        Change
+                        <span class="govuk-visually-hidden"> Dial</span>
+                      </a>
+                    </dd>
+                  </div>
+                  <div class="govuk-summary-list__row">
+                    <dt class="govuk-summary-list__key">
+                      ISO 3166-1 Numeric Code
+                    </dt>
+                    <dd class="govuk-summary-list__value">
+                      158
+                    </dd>
+                    <dd class="govuk-summary-list__actions">
+                      <a class="govuk-link" href="/version1/edit_data_item.html">
+                        Change
+                        <span class="govuk-visually-hidden"> iso31661numeric</span>
+                      </a>
+                    </dd>
+                  </div>
 
 
+                </form>
 
+              </div>
 
+            </div>
+            <a href="/version1/data_item_delete.html" role="button" draggable="false" class="govuk-button">Delete data item</a>
 
-
-
-
-                        	</div>
-                        </div>
-
-                        <p class=govuk-body-m> Select a change approver from the list below. </p>
-                                            <div class="govuk-form-group">
-                                                    <select class="govuk-select" id="approver" name="approver">
-                                                      <option value="null" selected="">Select an approver</option>
-                                                      <option value="ranks">Bob Smith</option>
-                                                      <option value="carrier_codes">Josh Jones</option>
-                                                      <option value="countries">Helen Rush</option>
-                                                      <option value="office_locations">Alex Logi</option>
-                                                      <option value="port_codes">Keanu Reeves</option>
-                                                    </select>
-                                                    </div>
-
-
-
-                                <a href="/di_change_submission.html" role="button" draggable="false" class="govuk-button">Submit change for approval</a>
-
-          </main>
+            </main>
 
           </div>
 
@@ -243,7 +273,6 @@ Year
                   </a>
                 </li>
 
-
                 <li class="govuk-footer__inline-list-item">
                   <a class="govuk-footer__link" href="/prototype-admin/clear-data">
                     Clear data
@@ -251,6 +280,7 @@ Year
                 </li>
 
             </ul>
+
 
 
 
