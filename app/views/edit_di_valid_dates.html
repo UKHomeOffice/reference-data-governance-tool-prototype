@@ -112,64 +112,95 @@ Reference Data Governance Tool
                         <div class="govuk-grid-row">
                         	<div class="govuk-grid-column-two-thirds">
 
-                        			<h1 class="govuk-heading-xl">Change the data item</h1>
-                        			<p class="govuk-body-l">Once this form has been submitted, it will be sent to the data owner selected for approval.</p>
-                        				<div class="govuk-form-group">
-                        					<label class="govuk-label" for="id">
-                        						ID
-                        					</label>
-                        					<span id="id-hint" class="govuk-hint">
-                        						An identifier for the data item, for example TW
-                        					</span>
-                        					<input class="govuk-input" id="id" name="name" type="text" value="TW">
-                        				</div>
+                        		<!--	<h1 class="govuk-heading-xl">Change the data item</h1> -->
+                        		<!--	<p class="govuk-body-l">Once this form has been submitted, it will be sent to the data owner selected for approval.</p> -->
 
-                        				<div class="govuk-form-group">
-                        					<label class="govuk-label" for="iso31661alpha3">
-                        						ISO 3166-1 Alpha Code
-                        					</label>
-                        					<span id="iso31661alpha3-hint" class="govuk-hint">
-                        						The 3 digit ISO alpha code for the country, for example TWN
-                        					</span>
-                        					<input class="govuk-input" id="iso31661alpha3" name="iso31661alpha3" type="text" value="TWN">
-                        				</div>
+                              <div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="valid-from-hint" role="group">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+    <h1 class="govuk-fieldset__heading">
+      Change the data item
+    </h1>
 
-                        				<div class="govuk-form-group">
-                        					<label class="govuk-label" for="name">
-                        						Name
-                        					</label>
-                        					<span id="homeUsualBase-hint" class="govuk-hint">
-                        						The name of the country
-                        					</span>
-                        					<input class="govuk-input" id="name" name="name" type="text" value="Taiwan">
-                        				</div>
-                                <div class="govuk-form-group">
-                                  <label class="govuk-label" for="continent">
-                                    Continent
-                                  </label>
-                                  <span id="continent-hint" class="govuk-hint">
-                                    The 2 digit ISO alpha code for the contninet the country is in, for exmaple AS
-                                  </span>
-                                  <input class="govuk-input" id="continent" name="name" type="text" value="AS">
-                                </div>
-                                <div class="govuk-form-group">
-                                  <label class="govuk-label" for="dial">
-                                    Dialling Code
-                                  </label>
-                                  <span id="dial-hint" class="govuk-hint">
-                                    The international dialling code for the country, for example 886
-                                  </span>
-                                  <input class="govuk-input" id="dial" name="name" type="text" value="886">
-                                </div>
-                                <div class="govuk-form-group">
-                                  <label class="govuk-label" for="iso31661numeric">
-                                    ISO 3166-1 Numeric Code
-                                  </label>
-                                  <span id="iso31661numeric-hint" class="govuk-hint">
-                                    The 3 digit ISO numeric code for the country, for example 158
-                                  </span>
-                                  <input class="govuk-input" id="iso31661numeric" name="name" type="text" value="158">
-                                </div>
+  </legend>
+  <h2 class="govuk-heading-l">
+    Valid From
+  </h2>
+  <span id="passport-issued-hint" class="govuk-hint">
+    For example, 01 08 2007
+  </span>
+  <div class="govuk-date-input" id="valid-from">
+    <div class="govuk-date-input__item">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-date-input__label" for="valid-from-day">
+          Day
+        </label>
+        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="valid-from-day" name="valid-from-day" type="number" pattern="[0-9]*" value="01">
+      </div>
+    </div>
+    <div class="govuk-date-input__item">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-date-input__label" for="valid-from-month">
+          Month
+        </label>
+        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="valid-from-month" name="valid-from-month" type="number" pattern="[0-9]*" value="01">
+      </div>
+    </div>
+    <div class="govuk-date-input__item">
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-date-input__label" for="valid-from-year">
+          Year
+        </label>
+        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="valid-from-year" name="valid-from-year" type="number" pattern="[0-9]*" value="2019">
+      </div>
+    </div>
+  </div>
+</fieldset>
+</div>
+
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="valid-from-hint" role="group">
+<h2 class="govuk-heading-l">
+Valid To
+</h2>
+<span id="passport-issued-hint" class="govuk-hint">
+For example, 01 08 2007
+</span>
+<div class="govuk-date-input" id="valid-to">
+<div class="govuk-date-input__item">
+<div class="govuk-form-group">
+<label class="govuk-label govuk-date-input__label" for="valid-to-day">
+Day
+</label>
+<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="valid-to-day" name="valid-to-day" type="number" pattern="[0-9]*" value="01">
+</div>
+</div>
+<div class="govuk-date-input__item">
+<div class="govuk-form-group">
+<label class="govuk-label govuk-date-input__label" for="valid-to-month">
+Month
+</label>
+<input class="govuk-input govuk-date-input__input govuk-input--width-2" id="valid-to-month" name="valid-to-month" type="number" pattern="[0-9]*" value="01">
+</div>
+</div>
+<div class="govuk-date-input__item">
+<div class="govuk-form-group">
+<label class="govuk-label govuk-date-input__label" for="valid-to-year">
+Year
+</label>
+<input class="govuk-input govuk-date-input__input govuk-input--width-4" id="valid-to-year" name="valid-to-year" type="number" pattern="[0-9]*" value="2020">
+</div>
+</div>
+</div>
+</fieldset>
+</div>
+
+
+
+
+
+
+
 
                         	</div>
                         </div>
