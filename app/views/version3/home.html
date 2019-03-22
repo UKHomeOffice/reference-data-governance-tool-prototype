@@ -59,7 +59,7 @@ Reference Data Governance Tool
     </div>
     <div class="govuk-header__content">
 
-      <a href="/version2/home.html" class="govuk-header__link govuk-header__link--service-name">
+      <a href="/version3/home.html" class="govuk-header__link govuk-header__link--service-name">
         Reference Data Governance Tool
       </a>
 
@@ -67,13 +67,8 @@ Reference Data Governance Tool
       <nav>
         <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
           <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
-            <a class="govuk-header__link" href="/version2/home.html">
+            <a class="govuk-header__link" href="/version3/home.html">
               Home
-            </a>
-          </li>
-          <li class="govuk-header__navigation-item">
-            <a class="govuk-header__link" href="/version2/search.html">
-              Search
             </a>
           </li>
           <li class="govuk-header__navigation-item">
@@ -112,147 +107,55 @@ Reference Data Governance Tool
                 <span></span>
               </h1>
               <p>
-                This service allows you to search for and manage reference data entities that are owned by Border Force.
+                This service allows you to view and manage reference data sets that are owned by Border Force.
+          </p>
+           <p>
+                Click the data set name to view the contents of the data set, or the view definition link to view the fields that define the data set.
           </p>
 
-          <a href="/version2/search.html" role="button" draggable="false" class="govuk-button">Search</a>
+          <table class="govuk-table">
+  <caption class="govuk-table__caption">Datasets</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="col">Name</th>
+      <th class="govuk-table__header" scope="col">Description</th>
+      <th class="govuk-table__header" scope="col">Action</th>     
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row"><a href="">BF Functions</a></th>
+      <td class="govuk-table__cell">XXXX</td>
+      <td class="govuk-table__cell"><a href="">View definition</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row"><a href="">BF Locations</a></th>
+      <td class="govuk-table__cell">XXX</td>
+      <td class="govuk-table__cell"><a href="">View definition</a></td>  
+    </tr>
+    <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row"><a href="">Carrier List</a></th>
+      <td class="govuk-table__cell">XXX</td>
+      <td class="govuk-table__cell"><a href="">View definition</a></td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row"><a href="">Countries</a></th>
+      <td class="govuk-table__cell">XXX</td>
+      <td class="govuk-table__cell"><a href="">View definition</a></td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row"><a href="">Currencies</a></th>
+      <td class="govuk-table__cell">xxxx</td>
+      <td class="govuk-table__cell"><a href="">View definition</a></td>
+    </tr>
+        <tr class="govuk-table__row">
+      <th class="govuk-table__header" scope="row"><a href="">Dog Role</a></th>
+      <td class="govuk-table__cell">xxxx</td>
+      <td class="govuk-table__cell"><a href="">View definition</a></td>
+    </tr>
+  </tbody>
+</table>
 
-                <!-- <div class="govuk-grid-row">
-          <div class="govuk-grid-column-full">
-            <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl govuk-!-margin-top-0">
-          </div>
-          </div>
-              <h1 class="govuk-heading-l">My Requests</h1>
-              <span></span>
-              <p> Manage your recent dataset requests below. </p>
-              <div class="govuk-tabs" data-module="tabs">
-              <ul class="govuk-tabs__list" role="tablist">
-                <li class="govuk-tabs__list-item" role="presentation">
-                  <a class="govuk-tabs__tab govuk-tabs__tab--selected" href="#requests-open" id="tab_requests-open" role="tab" aria-controls="gars-draft" tabindex="0" aria-selected="true">
-                    Open (3)
-                  </a>
-                </li>
-                <li class="govuk-tabs__list-item" role="presentation">
-                  <a class="govuk-tabs__tab" href="#requests-accepted" id="tab_requests-accepted" role="tab" aria-controls="gars-submitted" tabindex="-1" aria-selected="false">
-                    Accepted (246)
-                  </a>
-                </li>
-                <li class="govuk-tabs__list-item" role="presentation">
-                  <a class="govuk-tabs__tab" href="#requests-rejected" id="tab_requests-rejected" role="tab" aria-controls="gars-cancelled" tabindex="-1" aria-selected="false">
-                    Rejected (1)
-                  </a>
-                </li>
-              </ul>
-              <section class="govuk-tabs__panel" id="requests-open" role="tabpanel" aria-labelledby="tab_requests-open">
-                <table class="govuk-table">
-
-                  <thead class="govuk-table__head">
-                    <tr class="govuk-table__row">
-                      <th class="govuk-table__header" scope="col">Reference</th>
-                      <th class="govuk-table__header" scope="col">Request Date</th>
-                      <th class="govuk-table__header" scope="col">Dataset</th>
-                      <th class="govuk-table__header" scope="col">Status</th>
-                    </tr>
-                  </thead>
-                  <tbody class="govuk-table__body">
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell"><a href="#0">123456789</td></a>
-                      <td class="govuk-table__cell">10/03/19</td>
-                      <td class="govuk-table__cell">IATA Port Codes</td>
-                      <td class="govuk-table__cell">Submitted to IAO</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell"><a href="#0">123456789</td></a>
-                      <td class="govuk-table__cell">10/03/19</td>
-                      <td class="govuk-table__cell">Office location information</td>
-                      <td class="govuk-table__cell">IAO Review</td>
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell"><a href="#0">123456789</td></a>
-                      <td class="govuk-table__cell">10/03/19</td>
-                      <td class="govuk-table__cell">Officer Ranks</td>
-                      <td class="govuk-table__cell">Awaiting response</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <nav role="navigation" aria-label="Pagination">
-                					<div class="pagination__summary">Showing 101 – 111 of 246 results</div>
-                					<ul class="pagination">
-                						<li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Previous page"><span aria-hidden="true" role="presentation">«</span> Previous</a></li>
-                						<li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 1">1</a></li>
-                						<li class="pagination__item"><a class="pagination__link current" href="#0" aria-current="true" aria-label="Page 2, current page">2</a></li>
-                						<li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 3">3</a></li>
-                						<li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page">Next <span aria-hidden="true" role="presentation">»</span></a></li>
-                					</ul>
-                				</nav>
-              </section>
-              <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="requests-accepted" role="tabpanel" aria-labelledby="tab_requests-accepted">
-                <table class="govuk-table">
-
-                <thead class="govuk-table__head">
-                    <tr class="govuk-table__row">
-                      <th class="govuk-table__header" scope="col">Reference</th>
-                      <th class="govuk-table__header" scope="col">Request Date</th>
-                      <th class="govuk-table__header" scope="col">Dataset</th>
-                      <th class="govuk-table__header" scope="col">Status</th>
-                    </tr>
-                  </thead>
-                  <tbody class="govuk-table__body">
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell"><a href="#0">123456789</td></a>
-                      <td class="govuk-table__cell">10/03/19</td>
-                      <td class="govuk-table__cell">IATA Port Codes</td>
-                      <td class="govuk-table__cell">Submitted to IAO</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <nav role="navigation" aria-label="Pagination">
-                					<div class="pagination__summary">Showing 101 – 111 of 246 results</div>
-                					<ul class="pagination">
-                						<li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Previous page"><span aria-hidden="true" role="presentation">«</span> Previous</a></li>
-                						<li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 1">1</a></li>
-                						<li class="pagination__item"><a class="pagination__link current" href="#0" aria-current="true" aria-label="Page 2, current page">2</a></li>
-                						<li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 3">3</a></li>
-                						<li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page">Next <span aria-hidden="true" role="presentation">»</span></a></li>
-                					</ul>
-                				</nav>
-              </section>
-              <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="requests-rejected" role="tabpanel" aria-labelledby="tab_requests-rejected">
-                <table class="govuk-table">
-
-
-                     <thead class="govuk-table__head">
-                    <tr class="govuk-table__row">
-                      <th class="govuk-table__header" scope="col">Reference</th>
-                      <th class="govuk-table__header" scope="col">Request Date</th>
-                      <th class="govuk-table__header" scope="col">Dataset</th>
-                      <th class="govuk-table__header" scope="col">Status</th>
-                    </tr>
-                  </thead>
-                  <tbody class="govuk-table__body">
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell"><a href="#0">123456789</td></a>
-                      <td class="govuk-table__cell">10/03/19</td>
-                      <td class="govuk-table__cell">IATA Port Codes</td>
-                      <td class="govuk-table__cell">Submitted to IAO</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <nav role="navigation" aria-label="Pagination">
-                					<div class="pagination__summary">Showing 101 – 111 of 246 results</div>
-                					<ul class="pagination">
-                						<li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Previous page"><span aria-hidden="true" role="presentation">«</span> Previous</a></li>
-                						<li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 1">1</a></li>
-                						<li class="pagination__item"><a class="pagination__link current" href="#0" aria-current="true" aria-label="Page 2, current page">2</a></li>
-                						<li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 3">3</a></li>
-                						<li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page">Next <span aria-hidden="true" role="presentation">»</span></a></li>
-                					</ul>
-                				</nav>
-              </section>
-            </div>
-            </div>
-          </div>
-        </div> -->
         </main>
       </div>
     </div>
