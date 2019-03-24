@@ -72,11 +72,6 @@ Reference Data Governance Tool
             </a>
           </li>
           <li class="govuk-header__navigation-item">
-            <a class="govuk-header__link" href="/version3/search.html">
-              Search
-            </a>
-          </li>
-          <li class="govuk-header__navigation-item">
             <a class="govuk-header__link" href="#3">
               Signout
             </a>
@@ -113,31 +108,63 @@ Reference Data Governance Tool
 
                 <h1 class="govuk-heading-xl">Countries</h1>
                 <div class="govuk-form-group">
-                					<label class="govuk-label" for="entityDefinition">
-                						Entity Definition
-                					</label>
+                				     <h1 class="govuk-heading-m">Current description</h1>
                 					<span id="hintEntityName" class="govuk-hint">
                 						Describe the type of data stored in this entity.
                 					</span>
-                          <textarea class="govuk-textarea" id="entityDefinition" name="entityDefinition" rows="5" aria-describedby="hintEntityName"></textarea>
+                          <textarea placeholder="A list of countries and the associated names, descriptions, dial and ISO31661 alpha and numeric codes." disabled="true" class="govuk-textarea" id="entityDefinition" name="entityDefinition" rows="2" aria-describedby="hintEntityName"></textarea>
                 				</div>
-
+<div class="govuk-form-group">
+                             <h1 class="govuk-heading-m">New description</h1>
+                          <span id="hintEntityName" class="govuk-hint">
+                            Describe the type of data stored in this entity.
+                          </span>
+                          <textarea  class="govuk-textarea" id="entityDefinition" name="entityDefinition" rows="2" aria-describedby="hintEntityName"></textarea>
+                        </div>
                       </div>
                     </div>
-<p class=govuk-body-m> Select a change approver from the list below. </p>
+
+
+                  </main>
+
                     <div class="govuk-form-group">
-                            <select class="govuk-select" id="approver" name="approver">
-                              <option value="null" selected="">Select an approver</option>
-                              <option value="ranks">Bob Smith</option>
-                              <option value="carrier_codes">Josh Jones</option>
-                              <option value="countries">Helen Rush</option>
-                              <option value="office_locations">Alex Logi</option>
-                              <option value="port_codes">Keanu Reeves</option>
-                            </select>
-                            </div>
+  <fieldset class="govuk-fieldset" aria-describedby="change-hint" role="group">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+     <h1 class="govuk-heading-m">Change effective from</h1>
+    </legend>
+    <span id="change-hint" class="govuk-hint">
+      For example, 12 11 2019
+    </span>
+    <div class="govuk-date-input" id="change-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="change-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="change-day" name="change-day" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="change-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="change-month" name="change-month" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="change-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="change-year" name="change-year" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
 
-
-                    <a href="/version3/ds_change_submission.html" role="button" draggable="false" class="govuk-button">Submit change for approval</a>
+                    <a href="/version3/entity_change_submission.html" role="button" draggable="false" class="govuk-button">Submit change for approval</a>
 
 
 

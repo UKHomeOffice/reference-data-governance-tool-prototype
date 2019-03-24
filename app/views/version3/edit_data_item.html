@@ -72,11 +72,6 @@ Reference Data Governance Tool
             </a>
           </li>
           <li class="govuk-header__navigation-item">
-            <a class="govuk-header__link" href="/version3/search.html">
-              Search
-            </a>
-          </li>
-          <li class="govuk-header__navigation-item">
             <a class="govuk-header__link" href="#3">
               Signout
             </a>
@@ -113,79 +108,67 @@ Reference Data Governance Tool
                         	<div class="govuk-grid-column-two-thirds">
 
                         			<h1 class="govuk-heading-xl">Change the data item</h1>
-                        			<p class="govuk-body-l">Once this form has been submitted, it will be sent to the data owner selected for approval.</p>
+                        			<p class="govuk-body-l">Once this form has been submitted, it will be sent for approval.</p>
+                              <h1 class="govuk-heading-m">ID</h1>
+                              <p>An identifier for the data item, for example TW</p>
                         				<div class="govuk-form-group">
-                        					<label class="govuk-label" for="id">
-                        						ID
+                        					<label class="govuk-label" for="width-2">
+                        						Existing value
                         					</label>
                         					<span id="id-hint" class="govuk-hint">
-                        						An identifier for the data item, for example TW
+                        						
                         					</span>
-                        					<input class="govuk-input" id="id" name="name" type="text" value="TW">
+                        					<input class="govuk-input govuk-input--width-2" id="width-2" name="width-2" type="text" value="TW" disabled="true">
                         				</div>
 
-                        				<div class="govuk-form-group">
-                        					<label class="govuk-label" for="iso31661alpha3">
-                        						ISO 3166-1 Alpha Code
-                        					</label>
-                        					<span id="iso31661alpha3-hint" class="govuk-hint">
-                        						The 3 digit ISO alpha code for the country, for example TWN
-                        					</span>
-                        					<input class="govuk-input" id="iso31661alpha3" name="iso31661alpha3" type="text" value="TWN">
-                        				</div>
-
-                        				<div class="govuk-form-group">
-                        					<label class="govuk-label" for="name">
-                        						Name
-                        					</label>
-                        					<span id="homeUsualBase-hint" class="govuk-hint">
-                        						The name of the country
-                        					</span>
-                        					<input class="govuk-input" id="name" name="name" type="text" value="Taiwan">
-                        				</div>
                                 <div class="govuk-form-group">
-                                  <label class="govuk-label" for="continent">
-                                    Continent
+                                  <label class="govuk-label" for="width-2">
+                                    New value
                                   </label>
-                                  <span id="continent-hint" class="govuk-hint">
-                                    The 2 digit ISO alpha code for the contninet the country is in, for exmaple AS
-                                  </span>
-                                  <input class="govuk-input" id="continent" name="name" type="text" value="AS">
-                                </div>
-                                <div class="govuk-form-group">
-                                  <label class="govuk-label" for="dial">
-                                    Dialling Code
-                                  </label>
-                                  <span id="dial-hint" class="govuk-hint">
-                                    The international dialling code for the country, for example 886
-                                  </span>
-                                  <input class="govuk-input" id="dial" name="name" type="text" value="886">
-                                </div>
-                                <div class="govuk-form-group">
-                                  <label class="govuk-label" for="iso31661numeric">
-                                    ISO 3166-1 Numeric Code
-                                  </label>
-                                  <span id="iso31661numeric-hint" class="govuk-hint">
-                                    The 3 digit ISO numeric code for the country, for example 158
-                                  </span>
-                                  <input class="govuk-input" id="iso31661numeric" name="name" type="text" value="158">
+                                
+                                  <input class="govuk-input govuk-input--width-2" id="iso31661numeric" name="width-2" type="text" >
                                 </div>
 
                         	</div>
                         </div>
 
-                        <p class=govuk-body-m> Select a change approver from the list below. </p>
-                                            <div class="govuk-form-group">
-                                                    <select class="govuk-select" id="approver" name="approver">
-                                                      <option value="null" selected="">Select an approver</option>
-                                                      <option value="ranks">Bob Smith</option>
-                                                      <option value="carrier_codes">Josh Jones</option>
-                                                      <option value="countries">Helen Rush</option>
-                                                      <option value="office_locations">Alex Logi</option>
-                                                      <option value="port_codes">Keanu Reeves</option>
-                                                    </select>
-                                                    </div>
 
+                    <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="change-hint" role="group">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+     <h1 class="govuk-heading-m">Change effective from</h1>
+    </legend>
+    <span id="change-hint" class="govuk-hint">
+      For example, 12 11 2019
+    </span>
+    <div class="govuk-date-input" id="change-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="change-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="change-day" name="change-day" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="change-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="change-month" name="change-month" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="change-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="change-year" name="change-year" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
 
 
                                 <a href="/version3/di_change_submission.html" role="button" draggable="false" class="govuk-button">Submit change for approval</a>
