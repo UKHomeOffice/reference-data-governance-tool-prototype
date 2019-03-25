@@ -193,12 +193,12 @@ Reference Data Governance Tool
 					<tr class="govuk-table__row">
 						<td class="govuk-table__cell">
 							<ul class="govuk-list">
-								<li>XXXX</li>
+								<li>25th March 2019</li>
 							</ul>
 						</td>
 						<td class="govuk-table__cell">
 							<ul class="govuk-list">
-								<li>XXXX</li>
+								<li>Internal review (4 users)</li>
 							</ul>
 						</td>
 					</tr>
@@ -222,30 +222,36 @@ Reference Data Governance Tool
 				<li>Homepage
 					<ul>
 						<li><a href="/version3/home.html">Homepage</a></li>
+						
 					</ul>
 				</li>
             
-            <li>Manage Entities
+            <li>Entities
               <ul>
-						<li><a href="/version3/manage_entity.html">Manage Entity</a></li>
-						<ul><li><a href="/version3/edit_entity.html">Edit Entity</a></li>
-            <li><a href="/version3/ds_change_submission.html">Change Request Submission</a></li>
-            <li><a href="/version3/entity_delete.html">Delete Entity</a></li>
-            <li><a href="/version3/ds_delete_submission.html">Delete Request Submission</a></li>
+						<li><a href="/version3/view_entity.html">View definition</a></li>
+						<ul><li><a href="/version3/edit_entity.html">Edit entity</a></li>
+            <li><a href="/version3/entity_change_submission.html">Change request submission</a></li>
+            <li><a href="/version3/entity_delete.html">Delete entity</a></li>
+            <li><a href="/version3/entity_delete_submission.html">Delete request submission</a></li>
           </ul>
           </ul>
         </li>
-        <li>Manage Data Items
+        <li>Data Items
           <ul>
-        <li><a href="/version3/manage_data_item.html">Manage Data Item</a></li>
+        <li><a href="/version3/view_data_item.html">View data items</a></li>
         <ul>
-        <li><a href="/version3/edit_entity.html">Edit Valid From/To Dates</a></li>
-        <li><a href="/version3/edit_data_item.html">Edit Data Item</a></li>
-        <li><a href="/version3/di_change_submission.html">Change Request Submission</a></li>
-        <li><a href="/version3/data_item_delete.html">Delete Data Item</a></li>
-        <li><a href="/version3/di_delete_submission.html">Delete Request Submission</a></li>
+			<li><a href="/version3/new_data_item.html">Request new data item</a></li>
+        </ul>
+    </ul>
+        <ul>
+        	<li><a href="/version3/manage_data_item.html">Manage data item</a></li> 
+        <ul><li><a href="/version3/edit_di_valid_dates.html">Edit valid from/to dates</a></li>
+        <li><a href="/version3/edit_data_item.html">Edit data item</a></li>
+        <li><a href="/version3/di_change_submission.html">Change request submission</a></li>
+        <li><a href="/version3/data_item_delete.html">Delete data item</a></li>
+        <li><a href="/version3/di_delete_submission.html">Delete request submission</a></li>
       </ul>
-      </ul>
+    </ul>
     </li>
 		</div>
 	</div>
@@ -256,13 +262,18 @@ Reference Data Governance Tool
 		<div class="govuk-grid-column-two-thirds">
 			<h4 class="govuk-heading-s">Home page</h4>
 			<ul class="govuk-list govuk-list--bullet">
-				<li>Re-designed the user journey through the service. The user can now expect to enter the service and be immediately shown a list of entities available to manage. This should make it easier and more obvious to the user where to start the journey.</li>
+				<li>Re-designed the user journey through the service. The user can now expect to enter the service and be immediately shown a list of entities available to manage. This should make it easier and more obvious to the user where to start the journey</li>
+			</ul>
+						<h4 class="govuk-heading-s">Search</h4>
+			<ul class="govuk-list govuk-list--bullet">
+				<li>The Search page has been removed. In Version 1 and Version 2 the user had a separate page (and link in the naviagtion menu) to a page containing a bespoke search function. However due user research leading to a change in the user journey through the servive, the intention with Search going forward is to enable a search/sort on the list of Entities that the user is shown on the Home page. Filtering/sorting and eventual searching of this list is the full search capabilities that were originally </li>
 			</ul>
 			<h4 class="govuk-heading-s">Miscellaneous</h4>
 			<ul class="govuk-list govuk-list--bullet">
        	<li>Code review throughout the prototype, along with necessary cleanup etc.</li>
 				<li>Created the versioning structure for the prototype so that design iterations can be tracked more clearly.</li>
         <li>Various content changes after initial content review conducted and feedback received after internal Show & Tell sessions</li>
+                <li>Removal of the option for the user to select the approver for the change requests they submit. This will be handled automatically by the workflow engine</li>
 			</ul>
 		</div>
 	</div>
@@ -332,9 +343,9 @@ Reference Data Governance Tool
         </li>
           </ul>
         </li>
-            <li>Manage Entities
+            <li>Entities
               <ul>
-						<li><a href="/version2/manage_entity.html">Manage Entity</a></li>
+						<li><a href="/version2/manage_entity.html">View Entity</a></li>
 						<ul><li><a href="/version2/edit_entity.html">Edit Entity</a></li>
             <li><a href="/version2/ds_change_submission.html">Change Request Submission</a></li>
             <li><a href="/version2/entity_delete.html">Delete Entity</a></li>
@@ -342,7 +353,7 @@ Reference Data Governance Tool
           </ul>
           </ul>
         </li>
-        <li>Manage Data Items
+        <li>Data Items
           <ul>
         <li><a href="/version2/manage_data_item.html">Manage Data Item</a></li>
         <ul>
