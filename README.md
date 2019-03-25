@@ -1,6 +1,11 @@
 # Reference Data Governance Tool Prototype
 
-This project is the prototype for the Reference Data Governance Tool.
+This project is the prototype for the Reference Data Governance Tool. 
+
+- Current prototype version: Version 3
+- Last updated: 25th March 2019.
+
+>The prototype has been built using the [GOV UK Prototype Kit](https://govuk-prototype-kit.herokuapp.com/docs) V8.8.0
 
 ## Running the prototype locally
 
