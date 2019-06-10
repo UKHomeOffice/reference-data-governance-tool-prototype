@@ -30,7 +30,7 @@
     <!-- Blank header with no service name for the start page -->
     <header class="govuk-header " role="banner" data-module="header">
         <div class="govuk-header__container govuk-width-container">
-            <!-- <div class="govuk-header__logo">
+            <div class="govuk-header__logo">
                 <a href="/" class="govuk-header__link govuk-header__link--homepage">
                     <span class="govuk-header__logotype">
                         <svg role="presentation" focusable="false" class="govuk-header__logotype-crown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 97" height="32" width="36">
@@ -42,7 +42,7 @@
                         </span>
                     </span>
                 </a>
-            </div> -->
+            </div>
             <div class="govuk-header__content">
                 <a href="/version4/home.html" class="govuk-header__link govuk-header__link--service-name">
                     Reference Data Governance Tool
@@ -50,7 +50,7 @@
                 <button type="button" role="button" class="govuk-header__menu-button js-header-toggle" aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
                 <nav>
                     <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
-                        <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+                        <li class="govuk-header__navigation-item">
                             <a class="govuk-header__link" href="/version4/home.html">
                                 Home
                             </a>
@@ -76,115 +76,46 @@
                 </span>
             </p>
         </div>
-        <main class="govuk-main-wrapper " id="main-content" role="main">
-            <div class="govuk-grid-row">
-                <div class="govuk-grid-column-two-thirds">
-                    <h1 class="govuk-heading-xl">
-                        Reference Data Governance Tool
-                        <span></span>
-                    </h1>
-                    <p>
-                        This service allows you to view and manage reference data entities.
-                    </p>
-                    <h2 class="govuk-heading-l">
-                        Data sets
-                    </h2>
-                    <table class="govuk-table">
-                        <!-- <caption class="govuk-table__caption">Datasets</caption> -->
-                        <thead class="govuk-table__head">
-                            <tr class="govuk-table__row">
-                                <th class="govuk-table__header" scope="col">Name</th>
-                                <th class="govuk-table__header" scope="col">Description</th>
-                                <th class="govuk-table__header" scope="col">Data items</th>
-                                <th class="govuk-table__header" scope="col">Data set definition</th>
-                            </tr>
-                        </thead>
-                        <tbody class="govuk-table__body">
-                            <tr class="govuk-table__row">
-                            <tr class="govuk-table__row">
-                                <th class="govuk-table__header" scope="row">Carrier List</th>
-                                <td class="govuk-table__cell">A list of carriers that submit data to Border Force. Contains aviation and maritime carriers</td>
-                                <td class="govuk-table__cell"><a href="#.html">View data</a></td>
-                                <td class="govuk-table__cell"><a href="#.html">View definition</a></td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <th class="govuk-table__header" scope="row">Countries</th>
-                                <td class="govuk-table__cell">A list of countries as listed by the ISO 3166-1 Standard</td>
-                                <td class="govuk-table__cell"><a href="/version4/view_data_item.html">View data</a></td>
-                                <td class="govuk-table__cell"><a href="/version4/view_entity.html">View definition</a></td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <th class="govuk-table__header" scope="row">Currencies</th>
-                                <td class="govuk-table__cell">A list of currencies used by each country as listed by the ISO 3166-1 Standard</td>
-                                <td class="govuk-table__cell"><a href="#.html">View data</a></td>
-                                <td class="govuk-table__cell"><a href="#.html">View definition</a></td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                <th class="govuk-table__header" scope="row">Dog Role</th>
-                                <td class="govuk-table__cell">A list of the roles performed by service dogs</td>
-                                <td class="govuk-table__cell"><a href="#.html">View data</a></td>
-                                <td class="govuk-table__cell"><a href="#.html">View definition</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <nav role="navigation" aria-label="Pagination">
-                        <div class="pagination__summary">Showing 101 &ndash; 150 of 246 results</div>
-                        <ul class="pagination">
-                            <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Previous page"><span aria-hidden="true" role="presentation">&laquo;</span> Previous</a></li>
-                            <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 1">1</a></li>
-                            <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 2">2</a></li>
-                            <li class="pagination__item"><a class="pagination__link current" href="#0" aria-current="true" aria-label="Page 3, current page">3</a></li>
-                            <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 4">4</a></li>
-                            <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 5">5</a></li>
-                            <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page">Next <span aria-hidden="true" role="presentation">&raquo;</span></a></li>
-                        </ul>
-                    </nav>
-                    <!--
-<nav class="gem-c-pagination" role="navigation" aria-label="Pagination">
-  <ul class="gem-c-pagination__list" data-module="track-click" style="list-style-type: none;">
-      <li class="gem-c-pagination__item gem-c-pagination__item--previous">
-        <a href="#.html" class="gem-c-pagination__link" rel="prev" data-track-category="contentsClicked" data-track-action="previous" data-track-label=".html" data-track-dimension="previous" data-track-dimension-index="29">
-          <span class="gem-c-pagination__link-title">
-            <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
-              <path fill="currentColor" d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
-            </svg>
-            <span class="gem-c-pagination__link-text">
-              Previous page
-            </span>
-          </span>
-            <span class="gem-c-pagination__link-divider visually-hidden">:</span>
-            <span class="gem-c-pagination__link-label">1 of 5</span>
-        </a>
-      </li>
-      <li class="gem-c-pagination__item gem-c-pagination__item--next">
-        <a href="#.html" class="gem-c-pagination__link" rel="next" data-track-category="contentsClicked" data-track-action="next" data-track-label="#.html" data-track-dimension="next" data-track-dimension-index="29">
-          <span class="gem-c-pagination__link-title">
-            <svg class="gem-c-pagination__link-icon" xmlns="http://www.w3.org/2000/svg" height="13" width="17" viewBox="0 0 17 13">
-              <path fill="currentColor" d="m10.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
-            </svg>
-            <span class="gem-c-pagination__link-text">
-              Next page
-            </span>
-          </span>
-            <span class="gem-c-pagination__link-divider visually-hidden">:</span>
-            <span class="gem-c-pagination__link-label">3 of 5</span>
-        </a>
-      </li>
-  </ul>
-</nav> -->
-                    <div class="govuk-grid-row">
-                        <div class="govuk-grid-column-full">
-                            <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl govuk-!-margin-top-0">
-                        </div>
+        <!--  <a class="govuk-back-link" href="/version4/home.html">Back</a> -->
+        <div class="govuk-width-container">
+            <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-two-thirds">
+                        <h1 class="govuk-heading-xl">Sorry, there is a problem with the service</h1>
+                        <p class="govuk-body">Try again later.</p>
+                        <p class="govuk-body">
+                            We have not submitted your change request. When the service is available, you will have to start again.
+                        </p>
+                        <p class="govuk-body">
+                            Contact the COP Service Support Desk if you have any questions:
+                        </p>
+                        <p class="govuk-body">
+                            Online:<br>
+                            <a class="govuk-link" href="#"> <strong class="govuk-!-font-weight-bold">COP Online Support</a></strong>
+                        </p>
+                        <p class="govuk-body">
+                            Telephone:<br>
+                            <strong class="govuk-!-font-weight-bold">0808 157 3900</strong>
+                        </p>
+                        <p class="govuk-body">
+                            Textphone:<br>
+                            <strong class="govuk-!-font-weight-bold">0808 157 3909</strong>
+                        </p>
+                        <p class="govuk-body">
+                            Outside UK:<br>
+                            <strong class="govuk-!-font-weight-bold">+44 0808 157 0192</strong>
+                        </p>
+                        <p class="govuk-body">
+                            Opening times:<br>
+                            <strong class="govuk-!-font-weight-bold">Monday to Friday: 8am to 8pm</strong>
+                        </p>
+                        <p class="govuk-body">
+                            Closed Easter Sunday, Christmas Day, Boxing Day and New Year’s Day.
+                        </p>
                     </div>
-                    <h2 class="govuk-heading-m">
-                        New data sets
-                    </h2>
-                    <p>
-                        Requests for new data sets to be added to the service require sign off by the Data Engagement Group. </p>
-                    <a href="https://support.cop.homeoffice.gov.uk/servicedesk/customer/portal/3" role="button" draggable="false" class="govuk-button">Add a data set</a>
-        </main>
-    </div>
+                </div>
+            </main>
+        </div>
     </div>
     <footer class="govuk-footer " role="contentinfo">
         <div class="govuk-width-container ">
