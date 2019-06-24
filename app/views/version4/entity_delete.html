@@ -89,10 +89,18 @@
                         Are you sure?
                         <span></span>
                     </h1>
-                    <p>
+                    <div class="govuk-warning-text">
+                        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                        <strong class="govuk-warning-text__text">
+                            <span class="govuk-warning-text__assistive">Warning</span>
+                            This will send a deletion request to the data owner. Once the request is approved, the entity will no longer exist.
+                        </strong>
+                    </div>
+                    <a href="/version4/entity_delete_submission.html" role="button" draggable="false" class="govuk-button">Confirm deletion</a>
+                    <!--  <p>
                         This will send a deletion request to the data owner. Once the request is approved, the entity will no longer exist.
                     </p>
-                    <a href="/version4/entity_delete_submission.html" role="button" draggable="false" class="govuk-button">Confirm deletion</a>
+                    <a href="/version4/entity_delete_submission.html" role="button" draggable="false" class="govuk-button">Confirm deletion</a> -->
         </main>
     </div>
     <footer class="govuk-footer " role="contentinfo">
