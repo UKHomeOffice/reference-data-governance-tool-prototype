@@ -11,7 +11,7 @@ metadata:
     stable.k8s.psg.io/kcm.provider: http
 spec:
   rules:
-  - host: {{.HOSTNAME}}
+  - host: {{.REFDATA_PROTOTYPE_URL}}
     http:
       paths:
       - backend:
@@ -20,5 +20,5 @@ spec:
         path: /
   tls:
   - hosts:
-    - {{.HOSTNAME}}
+    - {{.REFDATA_PROTOTYPE_URL}}
     secretName: ref-data-gov-tool-prototype-tls
