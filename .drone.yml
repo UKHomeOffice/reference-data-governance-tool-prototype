@@ -94,12 +94,11 @@ pipeline:
     username: Drone Build Watcher
     template: >
       {{#build.deployTo}}
-        *{{repo.name}} - Build {{build.number}} - {{uppercasefirst build.deployTo}} - {{uppercase build.status}}*
+        *{{repo.name}} ({{build.commit}}) - Build {{build.number}} - {{uppercasefirst build.deployTo}} - {{uppercase build.status}}*
       {{else}}
-        *{{repo.name}} - Build {{build.number}} - Development - {{uppercase build.status}}*
+        *{{repo.name}} ({{build.commit}}) - Build {{build.number}} - Development - {{uppercase build.status}}*
       {{/build.deployTo}}
       {{build.link}}
-      {{build.link_url}}
     when:
       branch: master
       event: [ push, deployment ]
