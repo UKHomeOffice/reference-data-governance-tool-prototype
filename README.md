@@ -43,3 +43,20 @@ docker run -p 3000:3000 -m 500M --memory-reservation 200M ref-data-gov-tool-prot
 ## Automated builds and deployment
 
 This project will automatically build and deploy each change (`push` or `deployment`) to the `master` branch to the `dev` environment.
+
+### Drone secrets
+
+Name|Example
+---|---
+dev_drone_aws_access_key_id|https://console.aws.amazon.com/iam/home?region=eu-west-2#/users/bf-it-devtest-drone?section=security_credentials
+dev_drone_aws_secret_access_key|https://console.aws.amazon.com/iam/home?region=eu-west-2#/users/bf-it-devtest-drone?section=security_credentials
+drone_public_token|Drone token (Global for all github repositories and environments)
+env_kube_namespace_refdata|refdata-dev, cop-refdata-staging, cop-refdata
+env_kube_server|https://kube-api-notprod.notprod.acp.homeoffice.gov.uk, https://kube-api-prod.prod.acp.homeoffice.gov.uk
+env_kube_token|xxx
+env_refdata_prototype_url|prototype.dev.refdata.homeoffice.gov.uk, prototype.refdata.homeoffice.gov.uk
+production_drone_aws_access_key_id|https://console.aws.amazon.com/iam/home?region=eu-west-2#/users/bf-it-prod-drone?section=security_credentials
+production_drone_aws_secret_access_key|https://console.aws.amazon.com/iam/home?region=eu-west-2#/users/bf-it-prod-drone?section=security_credentials
+quay_password|xxx (Global for all repositories and environments)
+quay_username|docker (Global for all repositories and environments)
+slack_webhook|https://hooks.slack.com/services/xxx/yyy/zzz (Global for all repositories and environments)

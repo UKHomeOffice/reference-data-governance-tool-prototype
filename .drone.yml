@@ -4,6 +4,7 @@ pipeline:
     image: quay.io/ukhomeofficedigital/cop-secrets
     environment:
       - DRONE_SERVER=https://drone.acp.homeoffice.gov.uk
+      - DEPLOY_ENV=dev
     secrets:
       - source: DEV_DRONE_AWS_ACCESS_KEY_ID
         target: AWS_ACCESS_KEY_ID
@@ -12,12 +13,14 @@ pipeline:
       - source: DRONE_PUBLIC_TOKEN
         target: DRONE_TOKEN
     when:
-       event: push
+      environment: secrets
+      event: deployment
 
   synch_production_secrets:
     image: quay.io/ukhomeofficedigital/cop-secrets
     environment:
       - DRONE_SERVER=https://drone.acp.homeoffice.gov.uk
+      - DEPLOY_ENV=production
     secrets:
       - source: PRODUCTION_DRONE_AWS_ACCESS_KEY_ID
         target: AWS_ACCESS_KEY_ID
@@ -26,8 +29,8 @@ pipeline:
       - source: DRONE_PUBLIC_TOKEN
         target: DRONE_TOKEN
     when:
+      environment: secrets
       event: deployment
-      environment: production
 
   build:
     image: quay.io/ukhomeofficedigital/drone-docker
@@ -55,7 +58,7 @@ pipeline:
     secrets:
     - source: DEV_REFDATA_PROTOTYPE_URL
       target: REFDATA_PROTOTYPE_URL
-    - source: DEV_REFDATA_PROTOTYPE_KUBE_NAMESPACE
+    - source: DEV_KUBE_NAMESPACE_REFDATA
       target: KUBE_NAMESPACE
     - source: DEV_KUBE_SERVER
       target: KUBE_SERVER
@@ -72,7 +75,7 @@ pipeline:
     secrets:
     - source: PRODUCTION_REFDATA_PROTOTYPE_URL
       target: REFDATA_PROTOTYPE_URL
-    - source: PRODUCTION_REFDATA_PROTOTYPE_KUBE_NAMESPACE
+    - source: PRODUCTION_KUBE_NAMESPACE_REFDATA
       target: KUBE_NAMESPACE
     - source: PRODUCTION_KUBE_SERVER
       target: KUBE_SERVER
@@ -92,11 +95,11 @@ pipeline:
     template: >
       {{#build.deployTo}}
         *{{repo.name}} - Build {{build.number}} - {{uppercasefirst build.deployTo}} - {{uppercase build.status}}*
-        {{build.link}}
       {{else}}
         *{{repo.name}} - Build {{build.number}} - Development - {{uppercase build.status}}*
-        {{build.link}}
       {{/build.deployTo}}
+      {{build.link}}
+      {{build.link_url}}
     when:
       branch: master
       event: [ push, deployment ]
