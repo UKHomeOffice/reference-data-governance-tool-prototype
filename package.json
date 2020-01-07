@@ -3,9 +3,6 @@
   "description": "GOVUK prototyping app in Express",
   "version": "8.7.0",
   "private": true,
-  "engines": {
-    "node": "^10.0.0"
-  },
   "scripts": {
     "start": "node start.js",
     "lint": "standard",
@@ -17,7 +14,7 @@
     "basic-auth": "^2.0.0",
     "basic-auth-connect": "^1.0.0",
     "body-parser": "^1.14.1",
-    "browser-sync": "^2.11.1",
+    "browser-sync": "^2.26.7",
     "client-sessions": "^0.8.0",
     "cookie-parser": "^1.4.3",
     "cross-spawn": "^6.0.5",
@@ -36,7 +33,7 @@
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.0",
     "keypather": "^3.0.0",
-    "marked": "^0.4.0",
+    "marked": "^0.8.0",
     "notifications-node-client": "^4.1.0",
     "nunjucks": "^3.1.3",
     "portscanner": "^2.1.1",
@@ -52,7 +49,7 @@
     ]
   },
   "devDependencies": {
-    "jest": "^23.6.0",
+    "jest": "^25.0.0",
     "standard": "^12.0.1",
     "supertest": "^3.0.0"
   }
