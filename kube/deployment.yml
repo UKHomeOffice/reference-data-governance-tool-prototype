@@ -32,7 +32,7 @@ spec:
           - name: prototype
             containerPort: 3000
 
-      - name: proxy
+      - name: ref-data-gov-tool-prototype-proxy
         image: quay.io/ukhomeofficedigital/nginx-proxy
         securityContext:
           runAsNonRoot: true
