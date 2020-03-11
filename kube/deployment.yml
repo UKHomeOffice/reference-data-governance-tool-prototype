@@ -47,6 +47,8 @@ spec:
             value: 'FALSE'
           - name: STATSD_METRICS
             value: "FALSE"
+          - name: ADD_NGINX_SERVER_CFG
+            value: "location /maintenance/ { root /tmp/data; index index.html; }"
         ports:
           - name: https
             containerPort: 10443
