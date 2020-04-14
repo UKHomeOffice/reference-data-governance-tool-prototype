@@ -84,3 +84,4 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+/.port.tmp
