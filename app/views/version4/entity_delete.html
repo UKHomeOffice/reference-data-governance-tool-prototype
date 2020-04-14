@@ -85,6 +85,7 @@
         <main class="govuk-main-wrapper " id="main-content" role="main">
             <div class="govuk-grid-row">
                 <div class="govuk-grid-column-two-thirds">
+                    <form action="/version4/entity_delete_submission.html">
                     <h1 class="govuk-heading-xl">
                         Are you sure?
                         <span></span>
@@ -96,11 +97,14 @@
                             This will send a deletion request to the data set owner. Once the request is approved, the data set will no longer exist.
                         </strong>
                     </div>
-                    <a href="/version4/entity_delete_submission.html" role="button" draggable="false" class="govuk-button">Confirm deletion</a>
+                    <button class="govuk-button govuk-button--warning" data-module="govuk-button">
+                        Confirm deletion
+                    </button>
                     <!--  <p>
                         This will send a deletion request to the data owner. Once the request is approved, the entity will no longer exist.
                     </p>
                     <a href="/version4/entity_delete_submission.html" role="button" draggable="false" class="govuk-button">Confirm deletion</a> -->
+                </form>
         </main>
     </div>
     <footer class="govuk-footer " role="contentinfo">
