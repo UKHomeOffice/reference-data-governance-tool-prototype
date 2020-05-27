@@ -2,7 +2,7 @@
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: ref-data-gov-tool-prototype-ingress
+  name: {{.REFDATA_PROTOTYPE_NAME}}-ingress
   labels:
     cert-manager.io/solver: http01
   annotations:
@@ -15,10 +15,10 @@ spec:
     http:
       paths:
       - backend:
-          serviceName: ref-data-gov-tool-prototype-service
+          serviceName: {{.REFDATA_PROTOTYPE_NAME}}-service
           servicePort: 10443
         path: /
   tls:
   - hosts:
     - {{.REFDATA_PROTOTYPE_URL}}
-    secretName: ref-data-gov-tool-prototype-cmio
+    secretName: {{.REFDATA_PROTOTYPE_NAME}}-cmio

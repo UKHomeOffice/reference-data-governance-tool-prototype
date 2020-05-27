@@ -2,21 +2,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ref-data-gov-tool-prototype
+  name: {{.REFDATA_PROTOTYPE_NAME}}
 spec:
   replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      name: ref-data-gov-tool-prototype
+      name: {{.REFDATA_PROTOTYPE_NAME}}
   template:
     metadata:
       labels:
-        name: ref-data-gov-tool-prototype
+        name: {{.REFDATA_PROTOTYPE_NAME}}
     spec:
       containers:
       - name: prototype
-        image: quay.io/ukhomeofficedigital/ref-data-gov-tool-prototype:{{.DRONE_COMMIT_SHA}}
+        image: quay.io/ukhomeofficedigital/{{.REFDATA_PROTOTYPE_NAME}}:{{.DRONE_COMMIT_SHA}}
         imagePullPolicy: Always
         securityContext:
           runAsNonRoot: true
@@ -32,7 +32,7 @@ spec:
           - name: prototype
             containerPort: 3000
 
-      - name: ref-data-gov-tool-prototype-proxy
+      - name: {{.REFDATA_PROTOTYPE_NAME}}-proxy
         image: quay.io/ukhomeofficedigital/nginx-proxy
         securityContext:
           runAsNonRoot: true
