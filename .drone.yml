@@ -58,13 +58,14 @@ pipeline:
     secrets:
     - source: DEV_REFDATA_PROTOTYPE_URL
       target: REFDATA_PROTOTYPE_URL
-    - source: DEV_KUBE_NAMESPACE_REFDATA
+    - source: DEV_KUBE_NAMESPACE_COP_PROTOTYPE
       target: KUBE_NAMESPACE
     - source: DEV_KUBE_SERVER
       target: KUBE_SERVER
-    - source: DEV_API_REF_KUBE_TOKEN
+    - source: DEV_PROTOTYPE_KUBE_TOKEN
       target: KUBE_TOKEN
     commands:
+      - export REFDATA_PROTOTYPE_NAME="ref-data-gov-tool-prototype"
       - kd --insecure-skip-tls-verify -f kube/deployment.yml -f kube/service.yml -f kube/ingress.yml -f kube/network-policy.yml
     when:
       branch: master
@@ -82,6 +83,7 @@ pipeline:
     - source: PRODUCTION_API_REF_KUBE_TOKEN
       target: KUBE_TOKEN
     commands:
+      - export REFDATA_PROTOTYPE_NAME="ref-data-gov-tool-prototype"
       - kd --insecure-skip-tls-verify -f kube/deployment.yml -f kube/service.yml -f kube/ingress.yml -f kube/network-policy.yml
     when:
       event: deployment
