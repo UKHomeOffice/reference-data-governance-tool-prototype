@@ -76,11 +76,11 @@ pipeline:
     secrets:
     - source: PRODUCTION_REFDATA_PROTOTYPE_URL
       target: REFDATA_PROTOTYPE_URL
-    - source: PRODUCTION_KUBE_NAMESPACE_REFDATA
+    - source: PRODUCTION_KUBE_NAMESPACE_COP_PROTOTYPE
       target: KUBE_NAMESPACE
     - source: PRODUCTION_KUBE_SERVER
       target: KUBE_SERVER
-    - source: PRODUCTION_API_REF_KUBE_TOKEN
+    - source: PRODUCTION_PROTOTYPE_KUBE_TOKEN
       target: KUBE_TOKEN
     commands:
       - export REFDATA_PROTOTYPE_NAME="ref-data-gov-tool-prototype"
