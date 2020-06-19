@@ -15,7 +15,7 @@ spec:
         name: {{.REFDATA_PROTOTYPE_NAME}}
     spec:
       containers:
-      - name: prototype
+      - name: {{.REFDATA_PROTOTYPE_NAME}}
         image: quay.io/ukhomeofficedigital/{{.REFDATA_PROTOTYPE_NAME}}:{{.DRONE_COMMIT_SHA}}
         imagePullPolicy: Always
         securityContext:
@@ -33,20 +33,85 @@ spec:
             containerPort: 3000
 
       - name: {{.REFDATA_PROTOTYPE_NAME}}-proxy
-        image: quay.io/ukhomeofficedigital/nginx-proxy
-        securityContext:
-          runAsNonRoot: true
+        image: {{ .NGINX_IMAGE }}:{{ .NGINX_TAG }}
+        ports:
+          - name: https
+            containerPort: 10443
         env:
           - name: PROXY_SERVICE_HOST
             value: 'http://127.0.0.1'
           - name: PROXY_SERVICE_PORT
-            value: '3000'
+            value: '8080'
           - name: LOG_FORMAT_NAME
             value: 'json'
           - name: NAXSI_USE_DEFAULT_RULES
             value: 'FALSE'
           - name: STATSD_METRICS
             value: "FALSE"
+
+      - name: {{ .REFDATA_PROTOTYPE_NAME }}-keycloak-proxy
+        image: {{ .KEYCLOAK_GATEKEEPER_IMAGE }}:{{ .KEYCLOAK_GATEKEEPER_TAG }}
+        securityContext:
+          readOnlyRootFilesystem: true
+          runAsNonRoot: true
+          runAsUser: 1000
         ports:
-          - name: https
-            containerPort: 10443
+          - containerPort: 8080
+            name: http
+        args:
+          - --resources
+          - uri=/*
+          - --enable-logging
+          - --enable-json-logging
+          - --verbose
+        env:
+          - name: PROXY_CLIENT_ID
+            valueFrom:
+              secretKeyRef:
+                name: keycloak
+                key: keycloak_client_id
+          - name: PROXY_CLIENT_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: keycloak
+                key: keycloak_client_secret
+          - name: PROXY_DISCOVERY_URL
+            valueFrom:
+              secretKeyRef:
+                name: keycloak
+                key: keycloak_discovery_url
+          - name: PROXY_ENCRYPTION_KEY
+            valueFrom:
+              secretKeyRef:
+                name: keycloak
+                key: keycloak_encryption_key
+          - name: PROXY_LISTEN
+            value: 0.0.0.0:8080
+          - name: PROXY_UPSTREAM_URL
+            value: http://127.0.0.1:3000
+        resources:
+          limits:
+            cpu: 100m
+            memory: 100Mi
+          requests:
+            cpu: 20m
+            memory: 15Mi
+            ephemeral-storage: 100Ki
+        livenessProbe:
+          exec:
+            command:
+            - wget
+            - -O-
+            - http://localhost:8080/oauth/health
+          initialDelaySeconds: 15
+          periodSeconds: 15
+          timeoutSeconds: 5
+        readinessProbe:
+          exec:
+            command:
+            - wget
+            - -O-
+            - http://localhost:8080/oauth/health
+          initialDelaySeconds: 15
+          periodSeconds: 15
+          timeoutSeconds: 5
