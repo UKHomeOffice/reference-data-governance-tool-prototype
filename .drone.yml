@@ -50,9 +50,30 @@ pipeline:
       target: KUBE_TOKEN
     - source: PRODUCTION_WHITELIST
       target: WHITELIST
+    - source: PRODUCTION_KEYCLOAK_REALM
+      target: PRODUCTION_KEYCLOAK_REALM
+    - source: PRODUCTION_KEYCLOAK_URL
+      target: PRODUCTION_KEYCLOAK_URL
+    - source: NGINX_IMAGE
+      target: NGINX_IMAGE
+    - source: NGINX_TAG
+      target: NGINX_TAG
+    - source: PROTOCOL_HTTPS
+      target: PROTOCOL_HTTPS
+    - source: PRODUCTION_PROTOTYPE_KEYCLOAK_CLIENT_SECRET
+      target: KEYCLOAK_CLIENT_SECRET
+    - source: PRODUCTION_PROTOTYPE_KEYCLOAK_ENCRYPTION_KEY
+      target: KEYCLOAK_ENCRYPTION_KEY
+    - source: KEYCLOAK_GATEKEEPER_IMAGE
+      target: KEYCLOAK_GATEKEEPER_IMAGE
+    - source: KEYCLOAK_GATEKEEPER_TAG
+      target: KEYCLOAK_GATEKEEPER_TAG
+    - source: PROTOTYPE_KEYCLOAK_CLIENT_ID
+      target: KEYCLOAK_CLIENT_ID
     commands:
       - export REFDATA_PROTOTYPE_NAME="ref-data-gov-tool-prototype"
-      - kd --insecure-skip-tls-verify -f kube/deployment.yml -f kube/service.yml -f kube/ingress.yml -f kube/network-policy.yml
+      - export KEYCLOAK_DISCOVERY_URL="$${PROTOCOL_HTTPS}$${PRODUCTION_KEYCLOAK_URL}/realms/$${PRODUCTION_KEYCLOAK_REALM}"
+      - kd --insecure-skip-tls-verify -f kube/secret.yml -f kube/deployment.yml -f kube/service.yml -f kube/ingress.yml -f kube/network-policy.yml
     when:
       branch: master
       event: push

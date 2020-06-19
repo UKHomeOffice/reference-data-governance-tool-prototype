@@ -9,7 +9,7 @@ metadata:
     cert-manager.io/enabled: "true"
     kubernetes.io/ingress.class: "nginx-external"
     ingress.kubernetes.io/backend-protocol: "HTTPS"
-    ingress.kubernetes.io/whitelist-source-range: {{.WHITELIST}}
+    ingress.kubernetes.io/force-ssl-redirect: "true"
 spec:
   rules:
   - host: {{.REFDATA_PROTOTYPE_URL}}
@@ -17,7 +17,7 @@ spec:
       paths:
       - backend:
           serviceName: {{.REFDATA_PROTOTYPE_NAME}}-service
-          servicePort: 10443
+          servicePort: 443
         path: /
   tls:
   - hosts:
