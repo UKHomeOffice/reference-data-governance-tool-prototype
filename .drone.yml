@@ -23,6 +23,17 @@ pipeline:
     when:
       event: push
 
+  vulnerability-scan:
+    image: quay.io/ukhomeofficedigital/anchore-submission:latest
+    dockerfile: Dockerfile
+    image_name: ref-data-gov-tool-prototype:${DRONE_COMMIT_SHA}
+    local_image: true
+    tolerate: low
+    fail_on_detection: false
+    when:
+      branch: master
+      event: push
+
   image_to_quay:
     image: quay.io/ukhomeofficedigital/drone-docker
     secrets:
