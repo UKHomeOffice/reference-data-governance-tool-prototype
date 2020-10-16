@@ -1,0 +1,135 @@
+---
+kind: pipeline
+type: kubernetes
+name: default
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: synch_production_secrets
+  pull: if-not-exists
+  image: quay.io/ukhomeofficedigital/cop-secrets
+  environment:
+    AWS_ACCESS_KEY_ID:
+      from_secret: PRODUCTION_DRONE_AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY:
+      from_secret: PRODUCTION_DRONE_AWS_SECRET_ACCESS_KEY
+    DEPLOY_ENV: production
+    DRONE_SERVER: https://drone.acp.homeoffice.gov.uk
+    DRONE_TOKEN:
+      from_secret: DRONE_PUBLIC_TOKEN
+  when:
+    event:
+    - promote
+    target:
+    - secrets
+
+- name: build
+  pull: if-not-exists
+  image: quay.io/ukhomeofficedigital/drone-docker
+  commands:
+  - docker build -t ref-data-gov-tool-prototype:$${DRONE_COMMIT_SHA} .
+  when:
+    event:
+    - push
+
+- name: vulnerability-scan
+  pull: if-not-exists
+  image: quay.io/ukhomeofficedigital/anchore-submission:latest
+  settings:
+    dockerfile: Dockerfile
+    image_name: ref-data-gov-tool-prototype:${DRONE_COMMIT_SHA}
+    local_image: true
+    tolerate: low
+  when:
+    branch:
+    - master
+    event:
+    - push
+
+- name: image_to_quay
+  pull: if-not-exists
+  image: quay.io/ukhomeofficedigital/drone-docker
+  settings:
+    registry: quay.io
+    repo: quay.io/ukhomeofficedigital/ref-data-gov-tool-prototype
+    tags: ${DRONE_COMMIT_SHA}
+  environment:
+    DOCKER_PASSWORD:
+      from_secret: QUAY_PASSWORD
+    DOCKER_USERNAME:
+      from_secret: QUAY_USERNAME
+  when:
+    branch:
+    - master
+    event:
+    - push
+    - promote
+
+- name: deploy_to_prod
+  pull: if-not-exists
+  image: quay.io/ukhomeofficedigital/kd
+  commands:
+  - export REFDATA_PROTOTYPE_NAME="ref-data-gov-tool-prototype"
+  - export KEYCLOAK_DISCOVERY_URL="$${PROTOCOL_HTTPS}$${PRODUCTION_KEYCLOAK_URL}/realms/$${PRODUCTION_KEYCLOAK_REALM}"
+  - kd --insecure-skip-tls-verify -f kube/secret.yml -f kube/deployment.yml -f kube/service.yml -f kube/ingress.yml -f kube/network-policy.yml
+  environment:
+    KEYCLOAK_CLIENT_ID:
+      from_secret: PROTOTYPE_KEYCLOAK_CLIENT_ID
+    KEYCLOAK_CLIENT_SECRET:
+      from_secret: PRODUCTION_PROTOTYPE_KEYCLOAK_CLIENT_SECRET
+    KEYCLOAK_ENCRYPTION_KEY:
+      from_secret: PRODUCTION_PROTOTYPE_KEYCLOAK_ENCRYPTION_KEY
+    KEYCLOAK_GATEKEEPER_IMAGE:
+      from_secret: KEYCLOAK_GATEKEEPER_IMAGE
+    KEYCLOAK_GATEKEEPER_TAG:
+      from_secret: KEYCLOAK_GATEKEEPER_TAG
+    KUBE_NAMESPACE:
+      from_secret: PRODUCTION_KUBE_NAMESPACE_COP_PROTOTYPE
+    KUBE_SERVER:
+      from_secret: PRODUCTION_KUBE_SERVER
+    KUBE_TOKEN:
+      from_secret: PRODUCTION_PROTOTYPE_KUBE_TOKEN
+    NGINX_IMAGE:
+      from_secret: NGINX_IMAGE
+    NGINX_TAG:
+      from_secret: NGINX_TAG
+    PRODUCTION_KEYCLOAK_REALM:
+      from_secret: PRODUCTION_KEYCLOAK_REALM
+    PRODUCTION_KEYCLOAK_URL:
+      from_secret: PRODUCTION_KEYCLOAK_URL
+    PROTOCOL_HTTPS:
+      from_secret: PROTOCOL_HTTPS
+    REFDATA_PROTOTYPE_URL:
+      from_secret: PRODUCTION_REFDATA_PROTOTYPE_URL
+    WHITELIST:
+      from_secret: PRODUCTION_WHITELIST
+  when:
+    branch:
+    - master
+    event:
+    - push
+
+- name: notify
+  pull: if-not-exists
+  image: plugins/slack
+  settings:
+    channel: cop-deployments
+    template: "{{#build.deployTo}}\n  *{{repo.name}} - Build {{build.number}} - {{uppercasefirst build.deployTo}} - {{uppercase build.status}}*\n{{else}}\n  *{{repo.name}} - Build {{build.number}} - Development - {{uppercase build.status}}*\n{{/build.deployTo}} {{build.link}}\n"
+    username: Drone Build Watcher
+  environment:
+    SLACK_WEBHOOK:
+      from_secret: SLACK_WEBHOOK
+  when:
+    branch:
+    - master
+    event:
+    - push
+    - promote
+    status:
+    - success
+    - failure
+
+...
